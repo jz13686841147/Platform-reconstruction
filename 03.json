@@ -1,0 +1,121 @@
+{
+  "data": [
+    {
+      "username": "用户名1",
+      "telephone": "15026814035",
+      "identity": "平台管理员",
+      "create_time": "2017-06-01",
+      "last_data": "2017-07-01",
+      "forbidden": "否",
+      "operation":""
+    },
+    {
+      "username": "用户名2",
+      "telephone": "15226814035",
+      "identity": "平台管理员",
+      "create_time": "2017-06-01",
+      "last_data": "2017-07-01",
+      "forbidden": "否",
+      "operation":""
+    },
+    {
+      "username": "用户名3",
+      "telephone": "15326814035",
+      "identity": "平台管理员",
+      "create_time": "2017-06-01",
+      "last_data": "2017-07-01",
+      "forbidden": "否",
+      "operation":""
+    },
+    {
+      "username": "用户名4",
+      "telephone": "15426814035",
+      "identity": "平台管理员",
+      "create_time": "2017-06-01",
+      "last_data": "2017-07-01",
+      "forbidden": "否",
+      "operation":""
+    },
+    {
+      "username": "用户名5",
+      "telephone": "15526814035",
+      "identity": "平台管理员",
+      "create_time": "2017-06-01",
+      "last_data": "2017-07-01",
+      "forbidden": "否",
+      "operation":""
+    },
+    {
+      "username": "用户名6",
+      "telephone": "15626814035",
+      "identity": "平台管理员",
+      "create_time": "2017-06-01",
+      "last_data": "2017-07-01",
+      "forbidden": "否",
+      "operation":""
+    },
+    {
+      "username": "用户名7",
+      "telephone": "15726814035",
+      "identity": "平台管理员",
+      "create_time": "2017-06-01",
+      "last_data": "2017-07-01",
+      "forbidden": "否",
+      "operation":""
+    },
+    {
+      "username": "用户名8",
+      "telephone": "15086814035",
+      "identity": "平台管理员",
+      "create_time": "2017-06-01",
+      "last_data": "2017-07-01",
+      "forbidden": "否",
+      "operation":""
+    },
+    {
+      "username": "用户名9",
+      "telephone": "15926814035",
+      "identity": "平台管理员",
+      "create_time": "2017-06-01",
+      "last_data": "2017-07-01",
+      "forbidden": "否",
+      "operation":""
+    },
+    {
+      "username": "用户名7",
+      "telephone": "15726814035",
+      "identity": "平台管理员",
+      "create_time": "2017-06-01",
+      "last_data": "2017-07-01",
+      "forbidden": "否",
+      "operation":""
+    },
+    {
+      "username": "用户名8",
+      "telephone": "15086814035",
+      "identity": "平台管理员",
+      "create_time": "2017-06-01",
+      "last_data": "2017-07-01",
+      "forbidden": "否",
+      "operation":""
+    },
+    {
+      "username": "用户名9",
+      "telephone": "15926814035",
+      "identity": "平台管理员",
+      "create_time": "2017-06-01",
+      "last_data": "2017-07-01",
+      "forbidden": "否",
+      "operation":""
+    },
+    {
+      "username": "用户名1",
+      "telephone": "15026814035",
+      "identity": "平台管理员",
+      "create_time": "2017-06-01",
+      "last_data": "2017-07-01",
+      "forbidden": "否",
+      "operation":""
+    }
+  ]
+}

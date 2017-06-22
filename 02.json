@@ -1,0 +1,64 @@
+{
+  "data": [
+    {
+      "id": 2,
+      "username": "用户名2",
+      "nickname": "",
+      "password": "fb504b1ecda180d5c97f913dac8e8b57",
+      "telephone": "18266185803",
+      "address": "上海杨浦五角场",
+      "last_login": null,
+      "is_superuser": 0,
+      "is_active": true,
+      "date_joined": null
+    },
+    {
+      "id": 3,
+      "username": "用户名3",
+      "nickname": "",
+      "password": "fb504b1ecda180d5c97f913dac8e8b57",
+      "telephone": "18266185804",
+      "address": "上海杨浦国权北路",
+      "last_login": null,
+      "is_superuser": 0,
+      "is_active": true,
+      "date_joined": null
+    },
+    {
+      "id": 4,
+      "username": "用户名4",
+      "nickname": "",
+      "password": "fb504b1ecda180d5c97f913dac8e8b57",
+      "telephone": "18266185804",
+      "address": "上海杨浦中原路",
+      "last_login": null,
+      "is_superuser": 0,
+      "is_active": true,
+      "date_joined": null
+    },
+    {
+      "id": 1,
+      "username": "root",
+      "nickname": "",
+      "password": "cd1cae67efe80fd473051e06b3fe24fe",
+      "telephone": "88888888",
+      "address": "上海咔酷咔",
+      "last_login": null,
+      "is_superuser": 1,
+      "is_active": true,
+      "date_joined": null
+    },
+    {
+      "id": 16,
+      "username": "李四",
+      "nickname": "",
+      "password": "d628ca7e505428b6e22f6ac9b2790cdc",
+      "telephone": "",
+      "address": null,
+      "last_login": "2017-05-27T11:00:05Z",
+      "is_superuser": 0,
+      "is_active": false,
+      "date_joined": "2017-05-27T11:00:05Z"
+    }
+  ]
+}
