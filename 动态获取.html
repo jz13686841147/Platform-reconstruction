@@ -511,17 +511,17 @@
 //                    "bDestroy":true,
 //                    "bProcessing": true,
 //                    "bServerSide": true,
-                    "sAjaxSource": "http://118.178.19.235:8081/admins/?format=json"	,
-                    "fnServerData": function ( sSource, aoData, fnCallback ) {
-                        $.ajax( {
-                            "dataType": 'jsonp',
-                            "type": "POST",
-                            "url": sSource,
-//                            "data": aoData,
-                            "success": fnCallback,
-                        } );
-
-                    },
+                    "sAjaxSource": "http://118.178.19.235:8081/admins"	,
+//                    "fnServerData": function ( sSource, aoData, fnCallback ) {
+//                        $.ajax( {
+//                            "dataType": 'jsonp',
+//                            "type": "POST",
+//                            "url": sSource,
+////                            "data": aoData,
+//                            "success": fnCallback,
+//                        } );
+//
+//                    },
 
                     //"sScrollY": "200px",
 //                    "bPaginate": false,
