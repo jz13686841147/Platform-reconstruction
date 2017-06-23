@@ -7,8 +7,8 @@
     <meta name="description" content="Static &amp; Dynamic Tables" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
     <!-- bootstrap & fontawesome -->
-    <link rel="stylesheet" type="text/css" href="http://www.jq22.com/jquery/bootstrap-3.3.4.css">
-    <link rel="stylesheet" type="text/css" href="http://www.jq22.com/jquery/font-awesome.4.6.0.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap-3.3.4.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.4.6.0.css">
     <link rel="stylesheet" href="assets/font-awesome/4.5.0/css/font-awesome.min.css">
     <!-- page specific plugin styles -->
     <!-- ace styles -->
@@ -116,7 +116,7 @@
                 <b class="arrow"></b>
                 <ul class="submenu">
                     <li class="active">
-                        <a href="#">
+                        <a href="administrator.html">
                             <i class="menu-icon fa fa-caret-right"></i>
                             管理员管理
                         </a>
@@ -501,45 +501,33 @@
         $('#dynamic-table')
             //.wrap("<div class='dataTables_borderWrap' />")   //如果你是使用水平滚动（sscrollx）
                 .DataTable( {
-                    bAutoWidth: false,
+                    "bAutoWidth": false,
                     "bSort": true,
                     "aaSorting": [],
-//                    "aLengthMenu": [
-//                        [5, 10, 20, -1],
-//                        [5, 10, 20, "全部"] // change per page values here
-//                    ],
-//                    "bDestroy":true,
-//                    "bProcessing": true,
+                    "aLengthMenu": [
+                        [4, 10, 20, -1],
+                        [4, 10, 20, "全部"] // change per page values here
+                    ],
+                    "sPaginationType": "full_numbers",
+                    "bDestroy":true,
+                    "bProcessing": true,
 //                    "bServerSide": true,
-                    "sAjaxSource": "http://118.178.19.235:8081/admins"	,
-//                    "fnServerData": function ( sSource, aoData, fnCallback ) {
-//                        $.ajax( {
-//                            "dataType": 'jsonp',
-//                            "type": "POST",
-//                            "url": sSource,
-////                            "data": aoData,
-//                            "success": fnCallback,
-//                        } );
-//
-//                    },
 
+                    "sAjaxSource": "http://118.178.19.235:8081/admins/?format=json"	,
                     //"sScrollY": "200px",
 //                    "bPaginate": false,
-
                     //"sScrollX": "100%",
                     //"sScrollXInner": "120%",
                     //"bScrollCollapse": true,
                     //注意：如果你使用水平滚动（sscrollx） ".table-bordered"
                     //you may want to wrap the table inside a "div.dataTables_borderWrap" element
-
-                    //"iDisplayLength": 50
                     "columns": [
                         { "mData": "username","title": "用户名","defaultContent": "" },
                         { "mData": "telephone","title": "联系方式","defaultContent": "" },
-                        { "mData": "identity","title": "管理员身份","defaultContent": "" },
-                        { "mData": "create_time","title": "创建时间","defaultContent": "" },
-                        { "mData": "last_data","title": "上次登录时间","defaultContent": "" },
-                        { "mData": "forbidden","title": "是否禁用","defaultContent": "" },
+                        { "mData": "is_superuser","title": "管理员身份","defaultContent": "" },
+                        { "mData": "date_joined","title": "创建时间","defaultContent": "" },
+                        { "mData": "last_login","title": "上次登录时间","defaultContent": "" },
+                        { "mData": "is_active","title": "是否禁用","defaultContent": "" },
                         { "mData": "operation","title": "操作","defaultContent": "" }
                     ],
 
@@ -548,13 +536,14 @@
                         "aTargets":[6],
                         "bSortable": false,
                         "mRender":function(data,type,full){
-                        return "<div class=\"hidden-sm hidden-xs action-buttons\"> <a class=\"blue\" href=\"管理员管理添加.html\"> <i class=\"ace-icon fa fa-search-plus bigger-130\"></i> </a> <a class=\"green\" href=\"管理员管理编辑.html\"> <i class=\"ace-icon fa fa-pencil bigger-130\"></i></a> <a class=\"red\" href=\"#\"> <i class=\"ace-icon fa fa-trash-o bigger-130\"></i> </a> </div> <div class=\"hidden-md hidden-lg\"> <div class=\"inline pos-rel\"> <button class=\"btn btn-minier btn-yellow dropdown-toggle\"                data-toggle=\"dropdown\" data-position=\"auto\"> <i class=\"ace-icon fa fa-caret-down icon-only bigger-120\"></i> </button> <ul class=\"dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret                                      dropdown-close\"> <li> <a href=\"管理员管理添加.html\" class=\"tooltip-info\" data-rel=\"tooltip\" title=\"View\"> <span class=\"blue\"> <i class=\"ace-icon fa fa-search-plus bigger-120\"></i> </span> </a> </li> <li> <a href=\"管理员管理编辑.html\" class=\"tooltip-success\" data-rel=\"tooltip\" title=\"Edit\"> <span class=\"green\"> <i class=\"ace-icon fa fa-pencil-square-o bigger-120\"></i> </span></a></li> <li> <a href=\"#\" class=\"tooltip-error\" data-rel=\"tooltip\" title=\"Delete\"> <span class=\"red\"> <i class=\"ace-icon fa fa-trash-o bigger-120\"></i></span></a></li></ul> </div> </div>"}
+                        return "<div class=\"hidden-sm hidden-xs action-buttons\"> <a class=\"blue\" href=\"administrator-add.html\"> <i class=\"ace-icon fa fa-search-plus bigger-130\"></i> </a> <a class=\"green\" href=\"administrator-compile.html\"> <i class=\"ace-icon fa fa-pencil bigger-130\"></i></a> <a class=\"red\" href=\"#\"> <i class=\"ace-icon fa fa-trash-o bigger-130\"></i> </a> </div> <div class=\"hidden-md hidden-lg\"> <div class=\"inline pos-rel\"> <button class=\"btn btn-minier btn-yellow dropdown-toggle\"                data-toggle=\"dropdown\" data-position=\"auto\"> <i class=\"ace-icon fa fa-caret-down icon-only bigger-120\"></i> </button> <ul class=\"dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret                                      dropdown-close\"> <li> <a href=\"administrator-add.html\" class=\"tooltip-info\" data-rel=\"tooltip\" title=\"View\"> <span class=\"blue\"> <i class=\"ace-icon fa fa-search-plus bigger-120\"></i> </span> </a> </li> <li> <a href=\"administrator-compile.html\" class=\"tooltip-success\" data-rel=\"tooltip\" title=\"Edit\"> <span class=\"green\"> <i class=\"ace-icon fa fa-pencil-square-o bigger-120\"></i> </span></a></li> <li> <a href=\"#\" class=\"tooltip-error\" data-rel=\"tooltip\" title=\"Delete\"> <span class=\"red\"> <i class=\"ace-icon fa fa-trash-o bigger-120\"></i></span></a></li></ul> </div> </div>"}
                     },
                         {
                             "sClass": "hidden-480",
                             "aTargets": [2,3,5]
                         }
                     ],
+
                     select: {
                         style: 'multi'
                     }
@@ -646,9 +635,9 @@
         //表格复选框
         $('th input[type=checkbox], td input[type=checkbox]').prop('checked', false);
 
-        //选择/取消选择所有行根据表格标题”复选框
+        //选择/取消选择所有行根据表格标题"复选框
         $('#dynamic-table > thead > tr > th input[type=checkbox], #dynamic-table_wrapper input[type=checkbox]').eq(0).on('click', function(){
-            var th_checked = this.checked;//“TH”表头中的复选框
+            var th_checked = this.checked;//“TH"表头中的复选框
 
             $('#dynamic-table').find('tbody > tr').each(function(){
                 var row = this;
@@ -671,10 +660,10 @@
         });
 
         //和第一个简单的表格，并没有tabletools或数据表
-        //选择/取消选择所有行根据表格标题”复选框
+        //选择/取消选择所有行根据表格标题"复选框
         var active_class = 'active';
         $('#simple-table > thead > tr > th input[type=checkbox]').eq(0).on('click', function(){
-            var th_checked = this.checked;//“TH”表头中的复选框
+            var th_checked = this.checked;//“TH"表头中的复选框
 
             $(this).closest('table').find('tbody > tr').each(function(){
                 var row = this;

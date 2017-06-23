@@ -399,7 +399,7 @@
                 <div class="row">
                     <div class="col-xs-12">
                         <!-- PAGE CONTENT BEGINS -->
-                        <form class="form-horizontal" role="form">
+                        <form class="form-horizontal" role="form" method = 'post'>
                             <div class="form-group">
                                 <label class="col-sm-3 control-label no-padding-right" for="form-field-select-1">角色</label>
                                 <div class="col-sm-9">
@@ -450,7 +450,7 @@
                                 </div>
                             </div>
                             <div class="space-4"></div>
-                            <div class="clearfix form-actions">
+                            <div class="clearfix form-actions " type="submit">
                                 <div class="col-md-offset-3 col-md-9">
                                     <button class="btn btn-info">
                                         <i class="ace-icon fa fa-check bigger-110"></i>
@@ -527,6 +527,23 @@
 <!-- ace scripts -->
 <script src="assets/js/ace-elements.min.js"></script>
 <script src="assets/js/ace.min.js"></script>
-
+<script>
+    $('.form-horizontal').submitForm({
+        url: "http://118.178.19.235:8081/admins/",
+        dataType: "text",
+        callback: function (data) {
+            endFileUpload();
+            data = eval("(" + data + ")");
+            alert(data.Content);
+            if (data.Result > 0) {
+                location.href = data.Redirect;
+            }
+        },
+        before: function () {
+            startFileUpload();
+            var errMsg = "";
+        }
+    }).submit();
+</script>
 </body>
 </html>
