@@ -20632,3 +20632,8 @@ input.typeahead.scrollable ~ .tt-menu {
         border: 1px solid #666 !important
     }
 }
+.button-form {
+    float: right;
+    margin-left: 5px;
+    margin-right: 5px;
+}

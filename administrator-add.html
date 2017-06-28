@@ -399,13 +399,13 @@
                 <div class="row">
                     <div class="col-xs-12">
                         <!-- PAGE CONTENT BEGINS -->
-                        <form class="form-horizontal" role="form" method = 'post'>
+                        <form class="form-horizontal" enctype="multipart/form-data" role="form" method = 'post'  action = "http://118.178.19.235:8081/admins/">
                             <div class="form-group">
                                 <label class="col-sm-3 control-label no-padding-right" for="form-field-select-1">角色</label>
                                 <div class="col-sm-9">
                                     <select class="col-xs-10 col-sm-5" id="form-field-select-1">
                                         <option value="">请选择</option>
-                                        <option value="1">平台管理员</option>
+                                        <option value="0">平台管理员</option>
                                         <option value="1">商户管理员</option>
                                     </select>
                                     <span class="help-inline col-xs-12 col-sm-7">
@@ -417,7 +417,7 @@
                                 <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 用户名 </label>
 
                                 <div class="col-sm-9">
-                                    <input type="text" id="form-field-1" required="yes" class="col-xs-10 col-sm-5" />
+                                    <input type="text" id="form-field-1" name="username" required="yes" class="col-xs-10 col-sm-5" />
                                 </div>
                             </div>
                             <div class="space-4"></div>
@@ -425,7 +425,7 @@
                                 <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 密码 </label>
 
                                 <div class="col-sm-9">
-                                    <input type="password" id="form-field-2" required="yes" class="col-xs-10 col-sm-5" />
+                                    <input type="password" name="password" id="form-field-2" required="yes" class="col-xs-10 col-sm-5" />
                                 </div>
                             </div>
                             <div class="space-4"></div>
@@ -433,18 +433,18 @@
                                 <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 手机号码 </label>
 
                                 <div class="col-sm-9">
-                                    <input type="text" id="form-field-3" required="yes" class="col-xs-10 col-sm-5" />
+                                    <input type="text" name="telephone" id="form-field-3" required="yes" class="col-xs-10 col-sm-5" />
                                 </div>
                             </div>
                             <div class="control-group">
                                 <label class="col-sm-3 control-label no-padding-right">是否禁用</label>
                                 <div class="radio">
                                     <label>
-                                        <input name="form-field-radio" type="radio" class="ace" checked />
+                                        <input name="is_active" type="radio" class="ace" checked value="true" />
                                         <span class="lbl"> 是 </span>
                                     </label>
                                     <label>
-                                        <input name="form-field-radio" type="radio" class="ace" />
+                                        <input name="is_active" type="radio" value="false" class="ace" />
                                         <span class="lbl"> 否 </span>
                                     </label>
                                 </div>
@@ -452,7 +452,7 @@
                             <div class="space-4"></div>
                             <div class="clearfix form-actions " type="submit">
                                 <div class="col-md-offset-3 col-md-9">
-                                    <button class="btn btn-info">
+                                    <button class="btn btn-info" onclick="addKp()">
                                         <i class="ace-icon fa fa-check bigger-110"></i>
                                         保存
                                     </button>
@@ -461,6 +461,7 @@
                             </div>
                             <div class="hr hr-24"></div>
                         </form>
+                        <iframe id="rfFrame" name="rfFrame" src="about:blank" style="display:none;"></iframe>
                         <div class="hr hr-18 dotted hr-double"></div>
                         <h4 class="pink">
                             <i class="ace-icon fa fa-hand-o-right green"></i>
@@ -528,22 +529,27 @@
 <script src="assets/js/ace-elements.min.js"></script>
 <script src="assets/js/ace.min.js"></script>
 <script>
-    $('.form-horizontal').submitForm({
-        url: "http://118.178.19.235:8081/admins/",
-        dataType: "text",
-        callback: function (data) {
-            endFileUpload();
-            data = eval("(" + data + ")");
-            alert(data.Content);
-            if (data.Result > 0) {
-                location.href = data.Redirect;
-            }
-        },
-        before: function () {
-            startFileUpload();
-            var errMsg = "";
-        }
-    }).submit();
+//    $('.form-horizontal').submitForm({
+//        url: "http://118.178.19.235:8081/admins/",
+//        dataType: "text",
+//        callback: function (data) {
+//            endFileUpload();
+//            data = eval("(" + data + ")");
+//            alert(data.Content);
+//            if (data.Result > 0) {
+//                location.href = data.Redirect;
+//            }
+//        },
+//        before: function () {
+//            startFileUpload();
+//            var errMsg = "";
+//        }
+//    }).submit();
+function  addKp() {
+    $(".form-horizontal").attr("target","rfFrame");
+    window.location.href="http://localhost:63342/ace-master/%E5%B9%B3%E5%8F%B0%E9%87%8D%E6%9E%84/%E5%8A%A8%E6%80%81%E8%8E%B7%E5%8F%96.html?_ijt=afs1a85n9f7frdobj0tpmqb1rg#";
+}
+
 </script>
 </body>
 </html>
