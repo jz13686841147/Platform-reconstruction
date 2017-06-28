@@ -399,11 +399,11 @@
                 <div class="row">
                     <div class="col-xs-12">
                         <!-- PAGE CONTENT BEGINS -->
-                        <form class="form-horizontal" enctype="multipart/form-data" role="form" method = "PUT"  action = "http://118.178.19.235:8081/admins/36">
+                        <form class="form-horizontal" enctype="multipart/form-data" role="form" method = "PUT" >
                             <div class="form-group">
                                 <label class="col-sm-3 control-label no-padding-right" for="form-field-select-1">角色</label>
                                 <div class="col-sm-9">
-                                    <select class="col-xs-10 col-sm-5" id="form-field-select-1">
+                                    <select class="col-xs-10 col-sm-5" name="is_superuser" id="form-field-select-1">
                                         <option value="">请选择</option>
                                         <option value="0">平台管理员</option>
                                         <option value="1">商户管理员</option>
@@ -452,7 +452,8 @@
                             <div class="space-4"></div>
                             <div class="clearfix form-actions " type="submit">
                                 <div class="col-md-offset-3 col-md-9">
-                                    <button class="btn btn-info" onclick="addKp()">
+                                    <span id="spanid" class="hidden"></span>
+                                    <button class="btn btn-info" type="submit" onclick="addKp()">
                                         <i class="ace-icon fa fa-check bigger-110"></i>
                                         保存
                                     </button>
@@ -528,6 +529,7 @@
 <!-- ace scripts -->
 <script src="assets/js/ace-elements.min.js"></script>
 <script src="assets/js/ace.min.js"></script>
+<script src="assets/js/ajax-form.js"></script>
 <script>
     window.onload = function () {
         var urlinfo=window.location.href; //获取当前页面的url
@@ -537,7 +539,7 @@
         var newsids=newsidinfo.split("=");//对获得的参数字符串按照“=”进行分割
         var newsid=newsids[1];//得到参数值
 
-        $("span.id").text(newsid);
+        $(".form-horizontal").attr("action",'http://118.178.19.235:8081/admins/'+newsid);
         $.ajax({
             type:"get",
             url:"http://118.178.19.235:8081/admins/"+newsid+"?format=json",
@@ -564,11 +566,16 @@
         })
     }
 
-//    function  addKp() {
-//        $(".form-horizontal").attr("target","rfFrame");
-//        window.location.href="http://localhost:63342/ace-master/%E5%B9%B3%E5%8F%B0%E9%87%8D%E6%9E%84/%E5%8A%A8%E6%80%81%E8%8E%B7%E5%8F%96.html?_ijt=afs1a85n9f7frdobj0tpmqb1rg#";
-//    };
+    function  addKp() {
+        $(".form-horizontal").attr("target","rfFrame");
+        window.location.href="http://localhost:63342/ace-master/%E5%B9%B3%E5%8F%B0%E9%87%8D%E6%9E%84/%E5%8A%A8%E6%80%81%E8%8E%B7%E5%8F%96.html?_ijt=afs1a85n9f7frdobj0tpmqb1rg#";
+    };
 
+</script>
+<script>
+    $(document).ready(function() {
+        $('form').ajaxForm();
+    });
 </script>
 </body>
 </html>
