@@ -105,7 +105,7 @@
                 </a>
                 <b class="arrow"></b>
             </li>
-            <li class="active open">
+            <li class="">
                 <a href="#" class="dropdown-toggle">
                     <i class="menu-icon fa fa-desktop"></i>
                     <span class="menu-text">
@@ -115,7 +115,7 @@
                 </a>
                 <b class="arrow"></b>
                 <ul class="submenu">
-                    <li class="active">
+                    <li class="">
                         <a href="administrator.html">
                             <i class="menu-icon fa fa-caret-right"></i>
                             管理员管理
@@ -168,7 +168,7 @@
                         <b class="arrow"></b>
                     </li>
                     <li class="">
-                        <a href="#">
+                        <a href="charginghistory.html">
                             <i class="menu-icon fa fa-caret-right"></i>
                             充电历史
                         </a>
@@ -235,7 +235,7 @@
                     </li>
                 </ul>
             </li>
-            <li class="">
+            <li class="active open">
                 <a href="#" class="dropdown-toggle">
                     <i class="menu-icon fa fa-list-alt"></i>
                     <span class="menu-text"> 注册用户管理 </span>
@@ -243,7 +243,7 @@
                 </a>
                 <b class="arrow"></b>
                 <ul class="submenu">
-                    <li class="">
+                    <li class="active">
                         <a href="user.html">
                             <i class="menu-icon fa fa-caret-right"></i>
                             用户
@@ -308,13 +308,13 @@
                 <ul class="breadcrumb">
                     <li>
                         <i class="ace-icon fa fa-home home-icon"></i>
-                        <a href="administrator.html">首页</a>
+                        <a href="#">首页</a>
                     </li>
 
                     <li>
-                        <a href="#">系统管理</a>
+                        <a href="#">注册用户管理</a>
                     </li>
-                    <li class="active">管理员管理</li>
+                    <li class="active">用户</li>
                 </ul><!-- /.breadcrumb -->
             </div>
 
@@ -386,88 +386,122 @@
                     </div><!-- /.ace-settings-box -->
                 </div><!-- /.ace-settings-container -->
 
-                <div class="page-header">
-                    <h1>
-                        管理员管理
-                        <small>
-                            <i class="ace-icon fa fa-angle-double-right"></i>
-                            添加
-                        </small>
-                    </h1>
-                </div><!-- /.page-header -->
-
                 <div class="row">
                     <div class="col-xs-12">
-                        <!-- PAGE CONTENT BEGINS -->
-                        <form class="form-horizontal" enctype="multipart/form-data" role="form" method = 'post'  action = "http://118.178.19.235:8081/admins/">
-                            <div class="form-group">
-                                <label class="col-sm-3 control-label no-padding-right" for="form-field-select-1">角色</label>
-                                <div class="col-sm-9">
-                                    <select class="col-xs-10 col-sm-5" id="form-field-select-1">
-                                        <option value="">请选择</option>
-                                        <option value="0">平台管理员</option>
-                                        <option value="1">商户管理员</option>
-                                    </select>
-                                    <span class="help-inline col-xs-12 col-sm-7">
-												<span class="middle"><a href="administrator-new.html">新建角色</a></span>
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 用户名 </label>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <h3 class="header smaller lighter blue"></h3>
 
-                                <div class="col-sm-9">
-                                    <input type="text" id="form-field-1" name="username" required="yes" class="col-xs-10 col-sm-5" />
+                                <div class="clearfix">
+                                    <div class="pull-right tableTools-container"></div>
                                 </div>
-                            </div>
-                            <div class="space-4"></div>
-                            <div class="form-group">
-                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 密码 </label>
+                                <div class="table-header">
+                                    用户
+                                </div>
+                                <!-- div.table-responsive -->
 
-                                <div class="col-sm-9">
-                                    <input type="password" name="password" id="form-field-2" required="yes" class="col-xs-10 col-sm-5" />
-                                </div>
-                            </div>
-                            <div class="space-4"></div>
-                            <div class="form-group">
-                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 手机号码 </label>
+                                <!-- div.dataTables_borderWrap -->
+                                <div>
+                                    <table id="dynamic-table" class="table table-striped table-bordered table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th>
+                                                    类型
+                                                </th>
+                                                <th>用户名称</th>
+                                                <th class="hidden-480">状态</th>
+                                                <th>积分</th>
+                                                <th class="hidden-480">余额</th>
+                                                <th class="hidden-480">第三方账号</th>
+                                                <th class="hidden-480">创建时间</th>
+                                                <th class="hidden-480">上次登录时间</th>
+                                                <th>操作</th>
+                                            </tr>
+                                        </thead>
 
-                                <div class="col-sm-9">
-                                    <input type="text" name="telephone" id="form-field-3" required="yes" class="col-xs-10 col-sm-5" />
-                                </div>
-                            </div>
-                            <div class="control-group">
-                                <label class="col-sm-3 control-label no-padding-right">是否禁用</label>
-                                <div class="radio">
-                                    <label>
-                                        <input name="is_active" type="radio" class="ace" checked value="true" />
-                                        <span class="lbl"> 是 </span>
-                                    </label>
-                                    <label>
-                                        <input name="is_active" type="radio" value="false" class="ace" />
-                                        <span class="lbl"> 否 </span>
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="space-4"></div>
-                            <div class="clearfix form-actions " type="submit">
-                                <div class="col-md-offset-3 col-md-9">
-                                    <button class="btn btn-info" onclick="addKp()">
-                                        <i class="ace-icon fa fa-check bigger-110"></i>
-                                        保存
-                                    </button>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    磁卡用户
+                                                </td>
+                                                <td>用户名1</td>
+                                                <td class="hidden-480">正常</td>
+                                                <td>60</td>
+                                                <td class="hidden-480">180元</td>
+                                                <td class="hidden-480">jz13686841147</td>
+                                                <td class="hidden-480">
+                                                    2017-07-07/10:03:03
+                                                </td>
+                                                <td class="hidden-480"><span class="label label-sm label-warning">2017-07-07/10:53:03</span></td>
+                                                <td>
+                                                    <div class="hidden-sm hidden-xs action-buttons">
+                                                        <a class="blue" href="user-add.html">
+                                                            <i class="ace-icon fa fa-search-plus bigger-130"></i>
+                                                        </a>
 
+                                                        <a class="green" href="user-compile.html">
+                                                            <i class="ace-icon fa fa-pencil bigger-130"></i>
+                                                        </a>
+                                                        <a class="orange" href="user-history.html">
+                                                            <i class="ace-icon fa fa-history bigger-130"></i>
+                                                        </a>
+                                                        <a class="red" href="#">
+                                                            <i class="ace-icon fa fa-trash-o bigger-130"></i>
+                                                        </a>
+                                                    </div>
+
+                                                    <div class="hidden-md hidden-lg">
+                                                        <div class="inline pos-rel">
+                                                            <button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown" data-position="auto">
+                                                                <i class="ace-icon fa fa-caret-down icon-only bigger-120"></i>
+                                                            </button>
+                                                            <ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
+                                                                <li>
+                                                                    <a href="user-add.html" class="tooltip-info" data-rel="tooltip" title="View">
+                                                                                    <span class="blue">
+                                                                                        <i class="ace-icon fa fa-search-plus bigger-120"></i>
+                                                                                    </span>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="user-compile.html" class="tooltip-success" data-rel="tooltip" title="Edit">
+                                                                        <span class="green">
+                                                                            <i class="ace-icon fa fa-pencil-square-o bigger-120"></i>
+                                                                        </span>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="user-history.html" class="tooltip-success" data-rel="tooltip" title="history">
+                                                                        <span class="orange">
+                                                                            <i class="ace-icon fa fa-history bigger-120"></i>
+                                                                        </span>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+                                                                        <span class="red">
+                                                                            <i class="ace-icon fa fa-trash-o bigger-120"></i>
+                                                                        </span>
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
+                                <div class="hr hr-18 dotted hr-double"></div>
+                                <h4 class="pink">
+                                    <i class="ace-icon fa fa-hand-o-right icon-animated-hand-pointer blue"></i>
+                                    <a href="#" role="button" class="green" data-toggle="modal"> 雷神充电，为美好生活充电 </a>
+                                </h4>
+
+                                <div class="hr hr-18 dotted hr-double"></div>
                             </div>
-                            <div class="hr hr-24"></div>
-                        </form>
-                        <iframe id="rfFrame" name="rfFrame" src="about:blank" style="display:none;"></iframe>
-                        <div class="hr hr-18 dotted hr-double"></div>
-                        <h4 class="pink">
-                            <i class="ace-icon fa fa-hand-o-right green"></i>
-                            <a href="#" role="button" class="blue" data-toggle="modal"> 雷神充电，为美好生活充电 </a>
-                        </h4>
-                        <div class="hr hr-18 dotted hr-double"></div>
+                        </div>
+                        <!-- PAGE CONTENT ENDS -->
                     </div><!-- /.col -->
                 </div><!-- /.row -->
             </div><!-- /.page-content -->
@@ -505,7 +539,7 @@
 
 <!-- basic scripts -->
 
-<!--&lt;!&ndash;[if !IE]> &ndash;&gt;-->
+<!--[if !IE]> -->
 <script src="assets/js/jquery-2.1.1.js"></script>
 <!-- <![endif]-->
 
@@ -528,28 +562,260 @@
 <!-- ace scripts -->
 <script src="assets/js/ace-elements.min.js"></script>
 <script src="assets/js/ace.min.js"></script>
-<script>
-//    $('.form-horizontal').submitForm({
-//        url: "http://118.178.19.235:8081/admins/",
-//        dataType: "text",
-//        callback: function (data) {
-//            endFileUpload();
-//            data = eval("(" + data + ")");
-//            alert(data.Content);
-//            if (data.Result > 0) {
-//                location.href = data.Redirect;
-//            }
-//        },
-//        before: function () {
-//            startFileUpload();
-//            var errMsg = "";
-//        }
-//    }).submit();
-//function  addKp() {
-//    $(".form-horizontal").attr("target","rfFrame");
-//    window.location.href="http://localhost:63342/ace-master/%E5%B9%B3%E5%8F%B0%E9%87%8D%E6%9E%84/%E5%8A%A8%E6%80%81%E8%8E%B7%E5%8F%96.html?_ijt=afs1a85n9f7frdobj0tpmqb1rg#";
-//}
+<!-- 与此页相关的内联脚本 -->
+<script type="text/javascript">
+    jQuery(function($) {
+        //启动数据表插件
+        var myTable =
+            $('#dynamic-table')
+            //.wrap("<div class='dataTables_borderWrap' />")   //如果你是使用水平滚动（sscrollx）
+                .DataTable( {
+                    responsive: true,
+                    bAutoWidth: false,
+                    "bSort": true,
+                    "sPaginationType": "full_numbers",
+                    "aoColumnDefs": [
+                        {
+                            "aTargets": [8],
+                            "bSortable": false,
+                        }
+                    ],
+                    "aaSorting": [],
+                    "aLengthMenu": [
+                        [4, 10, 20, -1],
+                        [4, 10, 20, "全部"] // change per page values here
+                    ],
+
+                    //"bProcessing": true,
+                    //"bServerSide": true,
+                    //"sAjaxSource": "http://127.0.0.1/table.php"	,
+
+                    //,
+                    //"sScrollY": "200px",
+                    //"bPaginate": false,
+
+                    //"sScrollX": "100%",
+                    //"sScrollXInner": "120%",
+                    //"bScrollCollapse": true,
+                    //注意：如果你使用水平滚动（sscrollx） ".table-bordered"
+                    //you may want to wrap the table inside a "div.dataTables_borderWrap" element
+
+                    //"iDisplayLength": 50
+
+
+                    select: {
+                        style: 'multi'
+                    }
+                } );
+
+
+
+        $.fn.dataTable.Buttons.defaults.dom.container.className = 'dt-buttons btn-overlap btn-group btn-overlap';
+
+        new $.fn.dataTable.Buttons( myTable, {
+            buttons: [
+                {
+                    "extend": "colvis",
+                    "text": "<i class='fa fa-search bigger-110 blue'></i> <span class='hidden'>显示/隐藏  列</span>",
+                    "className": "btn btn-white btn-primary btn-bold",
+                    columns: ':not(:first):not(:last)'
+                },
+                {
+                    "extend": "copy",
+                    "text": "<i class='fa fa-copy bigger-110 pink'></i> <span class='hidden'>复制到剪贴板</span>",
+                    "className": "btn btn-white btn-primary btn-bold"
+                },
+                {
+                    "extend": "csv",
+                    "text": "<i class='fa fa-database bigger-110 orange'></i> <span class='hidden'>导出到 CSV</span>",
+                    "className": "btn btn-white btn-primary btn-bold"
+                },
+                {
+                    "extend": "excel",
+                    "text": "<i class='fa fa-file-excel-o bigger-110 green'></i> <span class='hidden'>输出到 Excel</span>",
+                    "className": "btn btn-white btn-primary btn-bold"
+                },
+                {
+                    "extend": "pdf",
+                    "text": "<i class='fa fa-file-pdf-o bigger-110 red'></i> <span class='hidden'>输出到 PDF</span>",
+                    "className": "btn btn-white btn-primary btn-bold"
+                },
+                {
+                    "extend": "print",
+                    "text": "<i class='fa fa-print bigger-110 grey'></i> <span class='hidden'>打印</span>",
+                    "className": "btn btn-white btn-primary btn-bold",
+                    autoPrint: false,
+                    message: 'This print was produced using the Print button for DataTables'
+                }
+            ]
+        } );
+        myTable.buttons().container().appendTo( $('.tableTools-container') );
+
+        //样式信息框
+        var defaultCopyAction = myTable.button(1).action();
+        myTable.button(1).action(function (e, dt, button, config) {
+            defaultCopyAction(e, dt, button, config);
+            $('.dt-button-info').addClass('gritter-item-wrapper gritter-info gritter-center white');
+        });
+
+
+        var defaultColvisAction = myTable.button(0).action();
+        myTable.button(0).action(function (e, dt, button, config) {
+
+            defaultColvisAction(e, dt, button, config);
+
+
+            if($('.dt-button-collection > .dropdown-menu').length == 0) {
+                $('.dt-button-collection')
+                    .wrapInner('<ul class="dropdown-menu dropdown-light dropdown-caret dropdown-caret" />')
+                    .find('a').attr('href', '#').wrap("<li />")
+            }
+            $('.dt-button-collection').appendTo('.tableTools-container .dt-buttons')
+        });
+
+        ////
+
+        setTimeout(function() {
+            $($('.tableTools-container')).find('a.dt-button').each(function() {
+                var div = $(this).find(' > div').first();
+                if(div.length == 1) div.tooltip({container: 'body', title: div.parent().text()});
+                else $(this).tooltip({container: 'body', title: $(this).text()});
+            });
+        }, 500);
+
+
+
+
+
+        myTable.on( 'select', function ( e, dt, type, index ) {
+            if ( type === 'row' ) {
+                $( myTable.row( index ).node() ).find('input:checkbox').prop('checked', true);
+            }
+        } );
+        myTable.on( 'deselect', function ( e, dt, type, index ) {
+            if ( type === 'row' ) {
+                $( myTable.row( index ).node() ).find('input:checkbox').prop('checked', false);
+            }
+        } );
+
+
+
+
+        /////////////////////////////////
+        //表格复选框
+        $('th input[type=checkbox], td input[type=checkbox]').prop('checked', false);
+
+        //选择/取消选择所有行根据表格标题”复选框
+        $('#dynamic-table > thead > tr > th input[type=checkbox], #dynamic-table_wrapper input[type=checkbox]').eq(0).on('click', function(){
+            var th_checked = this.checked;//“TH”表头中的复选框
+
+            $('#dynamic-table').find('tbody > tr').each(function(){
+                var row = this;
+                if(th_checked) myTable.row(row).select();
+                else  myTable.row(row).deselect();
+            });
+        });
+
+        //选择/取消选择行时复选框被选中/未选中
+        $('#dynamic-table').on('click', 'td input[type=checkbox]' , function(){
+            var row = $(this).closest('tr').get(0);
+            if(this.checked) myTable.row(row).deselect();
+            else myTable.row(row).select();
+        });
+
+
+
+        $(document).on('click', '#dynamic-table .dropdown-toggle', function(e) {
+            e.stopImmediatePropagation();
+            e.stopPropagation();
+            e.preventDefault();
+        });
+
+
+
+        //和第一个简单的表格，并没有tabletools或数据表
+        //选择/取消选择所有行根据表格标题”复选框
+        var active_class = 'active';
+        $('#simple-table > thead > tr > th input[type=checkbox]').eq(0).on('click', function(){
+            var th_checked = this.checked;//“TH”表头中的复选框
+
+            $(this).closest('table').find('tbody > tr').each(function(){
+                var row = this;
+                if(th_checked) $(row).addClass(active_class).find('input[type=checkbox]').eq(0).prop('checked', true);
+                else $(row).removeClass(active_class).find('input[type=checkbox]').eq(0).prop('checked', false);
+            });
+        });
+
+        //选择/取消选择行时复选框被选中/未选中
+        $('#simple-table').on('click', 'td input[type=checkbox]' , function(){
+            var $row = $(this).closest('tr');
+            if($row.is('.detail-row ')) return;
+            if(this.checked) $row.addClass(active_class);
+            else $row.removeClass(active_class);
+        });
+
+
+
+        /********************************/
+        //在下拉菜单中添加小视图动作按钮的工具提示
+        $('[data-rel="tooltip"]').tooltip({placement: tooltip_placement});
+
+        //向左或向右放置工具提示
+        function tooltip_placement(context, source) {
+            var $source = $(source);
+            var $parent = $source.closest('table')
+            var off1 = $parent.offset();
+            var w1 = $parent.width();
+
+            var off2 = $source.offset();
+            //var w2 = $source.width();
+
+            if( parseInt(off2.left) < parseInt(off1.left) + parseInt(w1 / 2) ) return 'right';
+            return 'left';
+        }
+
+
+
+
+        /***************/
+        $('.show-details-btn').on('click', function(e) {
+            e.preventDefault();
+            $(this).closest('tr').next().toggleClass('open');
+            $(this).find(ace.vars['.icon']).toggleClass('fa-angle-double-down').toggleClass('fa-angle-double-up');
+        });
+        /***************/
+
+
+
+
+
+        /**
+         /添加水平滚动条的一个简单的表
+         $('#simple-table').css({'width':'2000px', 'max-width': 'none'}).wrap('<div style="width: 1000px;" />').parent().ace_scroll(
+         {
+           horizontal: true,
+           styleClass: 'scroll-top scroll-dark scroll-visible',//show the scrollbars on top(default is bottom)
+           size: 2000,
+           mouseWheelLock: true
+         }
+         ).css('padding-top', '12px');
+         */
+
+
+    })
+    //			删除事件
+    //            $("#dynamic-table").on("click","a.red,a.tooltip-error", function() {
+    //                var result = confirm("你确定删除这一行吗?");
+    //                if(result==true){
+    //                    var link = $(this).parents("tr");
+    //                    link.remove();
+    //                }else{
+    //                    return;
+    //                };
+    //            });
+
 
 </script>
 </body>
+
 </html>

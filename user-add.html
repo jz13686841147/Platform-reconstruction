@@ -105,7 +105,7 @@
                 </a>
                 <b class="arrow"></b>
             </li>
-            <li class="active open">
+            <li class="">
                 <a href="#" class="dropdown-toggle">
                     <i class="menu-icon fa fa-desktop"></i>
                     <span class="menu-text">
@@ -115,7 +115,7 @@
                 </a>
                 <b class="arrow"></b>
                 <ul class="submenu">
-                    <li class="active">
+                    <li class="">
                         <a href="administrator.html">
                             <i class="menu-icon fa fa-caret-right"></i>
                             管理员管理
@@ -235,7 +235,7 @@
                     </li>
                 </ul>
             </li>
-            <li class="">
+            <li class="active open">
                 <a href="#" class="dropdown-toggle">
                     <i class="menu-icon fa fa-list-alt"></i>
                     <span class="menu-text"> 注册用户管理 </span>
@@ -243,7 +243,7 @@
                 </a>
                 <b class="arrow"></b>
                 <ul class="submenu">
-                    <li class="">
+                    <li class="active">
                         <a href="user.html">
                             <i class="menu-icon fa fa-caret-right"></i>
                             用户
@@ -314,7 +314,7 @@
                     <li>
                         <a href="#">系统管理</a>
                     </li>
-                    <li class="active">管理员管理</li>
+                    <li class="active">角色管理</li>
                 </ul><!-- /.breadcrumb -->
             </div>
 
@@ -388,7 +388,7 @@
 
                 <div class="page-header">
                     <h1>
-                        管理员管理
+                        角色管理
                         <small>
                             <i class="ace-icon fa fa-angle-double-right"></i>
                             添加
@@ -399,57 +399,133 @@
                 <div class="row">
                     <div class="col-xs-12">
                         <!-- PAGE CONTENT BEGINS -->
-                        <form class="form-horizontal" enctype="multipart/form-data" role="form" method = 'post'  action = "http://118.178.19.235:8081/admins/">
+                        <form class="form-horizontal" enctype="multipart/form-data" role="form" method = 'post'  action = "">
                             <div class="form-group">
-                                <label class="col-sm-3 control-label no-padding-right" for="form-field-select-1">角色</label>
+                                <label class="col-sm-2 control-label no-padding-right" for="form-field-select-1">类型</label>
                                 <div class="col-sm-9">
-                                    <select class="col-xs-10 col-sm-5" id="form-field-select-1">
+                                    <select class="col-xs-9 col-sm-6" required="yes" id="form-field-select-1">
                                         <option value="">请选择</option>
-                                        <option value="0">平台管理员</option>
-                                        <option value="1">商户管理员</option>
+
+                                        <option value="1" >管理员</option>
+
+                                        <option value="2" >运营商管理员</option>
+
+                                        <option value="3" >桩主</option>
+
+                                        <option value="4" >微信用户</option>
+
+                                        <option value="5" >支付宝</option>
+
+                                        <option value="5" >智能卡用户</option>
                                     </select>
-                                    <span class="help-inline col-xs-12 col-sm-7">
-												<span class="middle"><a href="administrator-new.html">新建角色</a></span>
-                                    </span>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 用户名 </label>
+                                <label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 密码 </label>
 
                                 <div class="col-sm-9">
-                                    <input type="text" id="form-field-1" name="username" required="yes" class="col-xs-10 col-sm-5" />
+                                    <input type="password" id="form-field-1" name="username" required="yes" class="col-xs-9 col-sm-6" />
                                 </div>
                             </div>
-                            <div class="space-4"></div>
                             <div class="form-group">
-                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 密码 </label>
+                                <label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 名称 </label>
 
                                 <div class="col-sm-9">
-                                    <input type="password" name="password" id="form-field-2" required="yes" class="col-xs-10 col-sm-5" />
+                                    <input type="text" id="form-field-2" name="username" required="yes" class="col-xs-9 col-sm-6" />
                                 </div>
                             </div>
-                            <div class="space-4"></div>
                             <div class="form-group">
-                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 手机号码 </label>
-
-                                <div class="col-sm-9">
-                                    <input type="text" name="telephone" id="form-field-3" required="yes" class="col-xs-10 col-sm-5" />
-                                </div>
-                            </div>
-                            <div class="control-group">
-                                <label class="col-sm-3 control-label no-padding-right">是否禁用</label>
+                                <label class="col-sm-2 control-label no-padding-right">性别</label>
                                 <div class="radio">
                                     <label>
-                                        <input name="is_active" type="radio" class="ace" checked value="true" />
-                                        <span class="lbl"> 是 </span>
+                                        <input name="is_self_support_select" type="radio" class="ace" checked value="true" />
+                                        <span class="lbl"> 男 </span>
                                     </label>
                                     <label>
-                                        <input name="is_active" type="radio" value="false" class="ace" />
-                                        <span class="lbl"> 否 </span>
+                                        <input name="is_self_support_select" type="radio" value="false" class="ace" />
+                                        <span class="lbl"> 女 </span>
                                     </label>
                                 </div>
                             </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 电话 </label>
+
+                                <div class="col-sm-9">
+                                    <input type="text" id="form-field-3" name="username" required="yes" class="col-xs-9 col-sm-6" />
+                                </div>
+                            </div>
                             <div class="space-4"></div>
+                            <div class="form-group citys" id="demo" >
+                                <label class="col-sm-2 control-label no-padding-right" for="form-field-select-1">地区</label>
+                                <p class="col-sm-9">
+                                    <select class="col-xs-3 col-sm-2" name="province" id="form-field-select-2">
+
+                                    </select>
+                                    <select class="col-xs-3 col-sm-2" name="city" id="form-field-select-3">
+
+                                    </select>
+                                    <select class="col-xs-3 col-sm-2" name="area" id="form-field-select-4">
+
+                                    </select>
+                                </p>
+                            </div>
+                            <div class="space-4"></div>
+                            <script type="text/javascript">
+                                $('#demo').citys({valueType:'name',province:'福建',city:'厦门',area:'思明'});
+                            </script>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 住址 </label>
+
+                                <div class="col-sm-9">
+                                    <input type="text" id="form-field-4" name="username" required="yes" class="col-xs-9 col-sm-6" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 工作地点 </label>
+
+                                <div class="col-sm-9">
+                                    <input type="text" id="form-field-5" name="username" required="yes" class="col-xs-9 col-sm-6" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label no-padding-right" for="form-field-1"> email </label>
+
+                                <div class="col-sm-9">
+                                    <input type="text" id="form-field-6" name="username" required="yes" class="col-xs-9 col-sm-6" />
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 余额 </label>
+
+                                <div class="col-sm-9">
+                                    <input type="text" id="form-field-7" name="username" required="yes" class="col-xs-9 col-sm-6" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 积分 </label>
+
+                                <div class="col-sm-9">
+                                    <input type="text" id="form-field-8" name="username" required="yes" class="col-xs-9 col-sm-6" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label no-padding-right" for="form-field-select-1">状态</label>
+                                <div class="col-sm-9">
+                                    <select class="col-xs-6 col-sm-3" name="model_id" id="form-field-select-6">
+                                        <option value="">请选择</option>
+                                        <option value="1" >正常</option>
+                                        <option value="2" >停用</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 车辆信息 </label>
+
+                                <div class="col-sm-9">
+                                    <input type="text" id="form-field-12" name="username" required="yes" class="col-xs-9 col-sm-6" />
+                                </div>
+                            </div>
                             <div class="clearfix form-actions " type="submit">
                                 <div class="col-md-offset-3 col-md-9">
                                     <button class="btn btn-info" onclick="addKp()">
@@ -505,7 +581,7 @@
 
 <!-- basic scripts -->
 
-<!--&lt;!&ndash;[if !IE]> &ndash;&gt;-->
+<!--[if !IE]> -->
 <script src="assets/js/jquery-2.1.1.js"></script>
 <!-- <![endif]-->
 
@@ -529,26 +605,26 @@
 <script src="assets/js/ace-elements.min.js"></script>
 <script src="assets/js/ace.min.js"></script>
 <script>
-//    $('.form-horizontal').submitForm({
-//        url: "http://118.178.19.235:8081/admins/",
-//        dataType: "text",
-//        callback: function (data) {
-//            endFileUpload();
-//            data = eval("(" + data + ")");
-//            alert(data.Content);
-//            if (data.Result > 0) {
-//                location.href = data.Redirect;
-//            }
-//        },
-//        before: function () {
-//            startFileUpload();
-//            var errMsg = "";
-//        }
-//    }).submit();
-//function  addKp() {
-//    $(".form-horizontal").attr("target","rfFrame");
-//    window.location.href="http://localhost:63342/ace-master/%E5%B9%B3%E5%8F%B0%E9%87%8D%E6%9E%84/%E5%8A%A8%E6%80%81%E8%8E%B7%E5%8F%96.html?_ijt=afs1a85n9f7frdobj0tpmqb1rg#";
-//}
+    //    $('.form-horizontal').submitForm({
+    //        url: "http://118.178.19.235:8081/admins/",
+    //        dataType: "text",
+    //        callback: function (data) {
+    //            endFileUpload();
+    //            data = eval("(" + data + ")");
+    //            alert(data.Content);
+    //            if (data.Result > 0) {
+    //                location.href = data.Redirect;
+    //            }
+    //        },
+    //        before: function () {
+    //            startFileUpload();
+    //            var errMsg = "";
+    //        }
+    //    }).submit();
+    function  addKp() {
+        $(".form-horizontal").attr("target","rfFrame");
+        window.location.href="http://localhost:63342/ace-master/%E5%B9%B3%E5%8F%B0%E9%87%8D%E6%9E%84/%E5%8A%A8%E6%80%81%E8%8E%B7%E5%8F%96.html?_ijt=afs1a85n9f7frdobj0tpmqb1rg#";
+    }
 
 </script>
 </body>

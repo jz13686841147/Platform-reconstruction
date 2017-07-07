@@ -115,14 +115,14 @@
                 </a>
                 <b class="arrow"></b>
                 <ul class="submenu">
-                    <li class="active">
+                    <li class="">
                         <a href="administrator.html">
                             <i class="menu-icon fa fa-caret-right"></i>
                             管理员管理
                         </a>
                         <b class="arrow"></b>
                     </li>
-                    <li class="">
+                    <li class="active">
                         <a href="role.html">
                             <i class="menu-icon fa fa-caret-right"></i>
                             角色管理
@@ -314,7 +314,7 @@
                     <li>
                         <a href="#">系统管理</a>
                     </li>
-                    <li class="active">管理员管理</li>
+                    <li class="active">角色管理</li>
                 </ul><!-- /.breadcrumb -->
             </div>
 
@@ -388,7 +388,7 @@
 
                 <div class="page-header">
                     <h1>
-                        管理员管理
+                        角色管理
                         <small>
                             <i class="ace-icon fa fa-angle-double-right"></i>
                             添加
@@ -399,54 +399,12 @@
                 <div class="row">
                     <div class="col-xs-12">
                         <!-- PAGE CONTENT BEGINS -->
-                        <form class="form-horizontal" enctype="multipart/form-data" role="form" method = 'post'  action = "http://118.178.19.235:8081/admins/">
+                        <form class="form-horizontal" enctype="multipart/form-data" role="form" method = 'post'  action = "">
                             <div class="form-group">
-                                <label class="col-sm-3 control-label no-padding-right" for="form-field-select-1">角色</label>
-                                <div class="col-sm-9">
-                                    <select class="col-xs-10 col-sm-5" id="form-field-select-1">
-                                        <option value="">请选择</option>
-                                        <option value="0">平台管理员</option>
-                                        <option value="1">商户管理员</option>
-                                    </select>
-                                    <span class="help-inline col-xs-12 col-sm-7">
-												<span class="middle"><a href="administrator-new.html">新建角色</a></span>
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 用户名 </label>
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 角色名称 </label>
 
                                 <div class="col-sm-9">
                                     <input type="text" id="form-field-1" name="username" required="yes" class="col-xs-10 col-sm-5" />
-                                </div>
-                            </div>
-                            <div class="space-4"></div>
-                            <div class="form-group">
-                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 密码 </label>
-
-                                <div class="col-sm-9">
-                                    <input type="password" name="password" id="form-field-2" required="yes" class="col-xs-10 col-sm-5" />
-                                </div>
-                            </div>
-                            <div class="space-4"></div>
-                            <div class="form-group">
-                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 手机号码 </label>
-
-                                <div class="col-sm-9">
-                                    <input type="text" name="telephone" id="form-field-3" required="yes" class="col-xs-10 col-sm-5" />
-                                </div>
-                            </div>
-                            <div class="control-group">
-                                <label class="col-sm-3 control-label no-padding-right">是否禁用</label>
-                                <div class="radio">
-                                    <label>
-                                        <input name="is_active" type="radio" class="ace" checked value="true" />
-                                        <span class="lbl"> 是 </span>
-                                    </label>
-                                    <label>
-                                        <input name="is_active" type="radio" value="false" class="ace" />
-                                        <span class="lbl"> 否 </span>
-                                    </label>
                                 </div>
                             </div>
                             <div class="space-4"></div>
@@ -505,7 +463,7 @@
 
 <!-- basic scripts -->
 
-<!--&lt;!&ndash;[if !IE]> &ndash;&gt;-->
+<!--[if !IE]> -->
 <script src="assets/js/jquery-2.1.1.js"></script>
 <!-- <![endif]-->
 
@@ -529,26 +487,26 @@
 <script src="assets/js/ace-elements.min.js"></script>
 <script src="assets/js/ace.min.js"></script>
 <script>
-//    $('.form-horizontal').submitForm({
-//        url: "http://118.178.19.235:8081/admins/",
-//        dataType: "text",
-//        callback: function (data) {
-//            endFileUpload();
-//            data = eval("(" + data + ")");
-//            alert(data.Content);
-//            if (data.Result > 0) {
-//                location.href = data.Redirect;
-//            }
-//        },
-//        before: function () {
-//            startFileUpload();
-//            var errMsg = "";
-//        }
-//    }).submit();
-//function  addKp() {
-//    $(".form-horizontal").attr("target","rfFrame");
-//    window.location.href="http://localhost:63342/ace-master/%E5%B9%B3%E5%8F%B0%E9%87%8D%E6%9E%84/%E5%8A%A8%E6%80%81%E8%8E%B7%E5%8F%96.html?_ijt=afs1a85n9f7frdobj0tpmqb1rg#";
-//}
+    //    $('.form-horizontal').submitForm({
+    //        url: "http://118.178.19.235:8081/admins/",
+    //        dataType: "text",
+    //        callback: function (data) {
+    //            endFileUpload();
+    //            data = eval("(" + data + ")");
+    //            alert(data.Content);
+    //            if (data.Result > 0) {
+    //                location.href = data.Redirect;
+    //            }
+    //        },
+    //        before: function () {
+    //            startFileUpload();
+    //            var errMsg = "";
+    //        }
+    //    }).submit();
+    function  addKp() {
+        $(".form-horizontal").attr("target","rfFrame");
+        window.location.href="http://localhost:63342/ace-master/%E5%B9%B3%E5%8F%B0%E9%87%8D%E6%9E%84/%E5%8A%A8%E6%80%81%E8%8E%B7%E5%8F%96.html?_ijt=afs1a85n9f7frdobj0tpmqb1rg#";
+    }
 
 </script>
 </body>

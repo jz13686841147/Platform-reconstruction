@@ -115,14 +115,14 @@
                 </a>
                 <b class="arrow"></b>
                 <ul class="submenu">
-                    <li class="active">
+                    <li class="">
                         <a href="administrator.html">
                             <i class="menu-icon fa fa-caret-right"></i>
                             管理员管理
                         </a>
                         <b class="arrow"></b>
                     </li>
-                    <li class="">
+                    <li class="active">
                         <a href="role.html">
                             <i class="menu-icon fa fa-caret-right"></i>
                             角色管理
@@ -314,7 +314,7 @@
                     <li>
                         <a href="#">系统管理</a>
                     </li>
-                    <li class="active">管理员管理</li>
+                    <li class="active">角色管理</li>
                 </ul><!-- /.breadcrumb -->
             </div>
 
@@ -388,10 +388,10 @@
 
                 <div class="page-header">
                     <h1>
-                        管理员管理
+                        角色管理
                         <small>
                             <i class="ace-icon fa fa-angle-double-right"></i>
-                            添加
+                            编辑
                         </small>
                     </h1>
                 </div><!-- /.page-header -->
@@ -399,20 +399,7 @@
                 <div class="row">
                     <div class="col-xs-12">
                         <!-- PAGE CONTENT BEGINS -->
-                        <form class="form-horizontal" enctype="multipart/form-data" role="form" method = 'post'  action = "http://118.178.19.235:8081/admins/">
-                            <div class="form-group">
-                                <label class="col-sm-3 control-label no-padding-right" for="form-field-select-1">角色</label>
-                                <div class="col-sm-9">
-                                    <select class="col-xs-10 col-sm-5" id="form-field-select-1">
-                                        <option value="">请选择</option>
-                                        <option value="0">平台管理员</option>
-                                        <option value="1">商户管理员</option>
-                                    </select>
-                                    <span class="help-inline col-xs-12 col-sm-7">
-												<span class="middle"><a href="administrator-new.html">新建角色</a></span>
-                                    </span>
-                                </div>
-                            </div>
+                        <form class="form-horizontal" enctype="multipart/form-data" role="form" method = "PUT" >
                             <div class="form-group">
                                 <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 用户名 </label>
 
@@ -421,38 +408,10 @@
                                 </div>
                             </div>
                             <div class="space-4"></div>
-                            <div class="form-group">
-                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 密码 </label>
-
-                                <div class="col-sm-9">
-                                    <input type="password" name="password" id="form-field-2" required="yes" class="col-xs-10 col-sm-5" />
-                                </div>
-                            </div>
-                            <div class="space-4"></div>
-                            <div class="form-group">
-                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 手机号码 </label>
-
-                                <div class="col-sm-9">
-                                    <input type="text" name="telephone" id="form-field-3" required="yes" class="col-xs-10 col-sm-5" />
-                                </div>
-                            </div>
-                            <div class="control-group">
-                                <label class="col-sm-3 control-label no-padding-right">是否禁用</label>
-                                <div class="radio">
-                                    <label>
-                                        <input name="is_active" type="radio" class="ace" checked value="true" />
-                                        <span class="lbl"> 是 </span>
-                                    </label>
-                                    <label>
-                                        <input name="is_active" type="radio" value="false" class="ace" />
-                                        <span class="lbl"> 否 </span>
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="space-4"></div>
                             <div class="clearfix form-actions " type="submit">
                                 <div class="col-md-offset-3 col-md-9">
-                                    <button class="btn btn-info" onclick="addKp()">
+                                    <span id="spanid" class="hidden"></span>
+                                    <button class="btn btn-info" type="submit" onclick="addKp()">
                                         <i class="ace-icon fa fa-check bigger-110"></i>
                                         保存
                                     </button>
@@ -505,7 +464,7 @@
 
 <!-- basic scripts -->
 
-<!--&lt;!&ndash;[if !IE]> &ndash;&gt;-->
+<!--[if !IE]> -->
 <script src="assets/js/jquery-2.1.1.js"></script>
 <!-- <![endif]-->
 
@@ -528,28 +487,53 @@
 <!-- ace scripts -->
 <script src="assets/js/ace-elements.min.js"></script>
 <script src="assets/js/ace.min.js"></script>
+<script src="assets/js/ajax-form.js"></script>
 <script>
-//    $('.form-horizontal').submitForm({
-//        url: "http://118.178.19.235:8081/admins/",
-//        dataType: "text",
-//        callback: function (data) {
-//            endFileUpload();
-//            data = eval("(" + data + ")");
-//            alert(data.Content);
-//            if (data.Result > 0) {
-//                location.href = data.Redirect;
+//    window.onload = function () {
+//        var urlinfo=window.location.href; //获取当前页面的url
+//        var len=urlinfo.length;//获取url的长度
+//        var offset=urlinfo.indexOf("?");//设置参数字符串开始的位置
+//        var newsidinfo=urlinfo.substr(offset,len)//取出参数字符串 这里会获得类似“id=1”这样的字符串
+//        var newsids=newsidinfo.split("=");//对获得的参数字符串按照“=”进行分割
+//        var newsid=newsids[1];//得到参数值
+//
+//        $(".form-horizontal").attr("action",'http://118.178.19.235:8081/admins/'+newsid);
+//        $.ajax({
+//            type:"get",
+//            url:"http://118.178.19.235:8081/admins/"+newsid+"?format=json",
+//            data:null,
+//            async:true,
+//            success: function (data) {
+//                $("#form-field-select-1").val(data.data.is_superuser);
+//                $("#form-field-1").val(data.data.username);
+//                $("#form-field-2").val(data.data.password);
+//                $("#form-field-3").val(data.data.telephone);
+////
+//                if (data.data.is_active==true){
+//                    $("#form-field-4").attr("checked","");
+//                } else{
+//                    $("#form-field-5").attr("checked","");
+//                }
+//
+//
+//            },
+//            error: function () {
+//                alert("错误");
 //            }
-//        },
-//        before: function () {
-//            startFileUpload();
-//            var errMsg = "";
-//        }
-//    }).submit();
-//function  addKp() {
-//    $(".form-horizontal").attr("target","rfFrame");
-//    window.location.href="http://localhost:63342/ace-master/%E5%B9%B3%E5%8F%B0%E9%87%8D%E6%9E%84/%E5%8A%A8%E6%80%81%E8%8E%B7%E5%8F%96.html?_ijt=afs1a85n9f7frdobj0tpmqb1rg#";
-//}
+//
+//        })
+//    }
 
+    function  addKp() {
+        $(".form-horizontal").attr("target","rfFrame");
+        window.location.href="http://localhost:63342/ace-master/%E5%B9%B3%E5%8F%B0%E9%87%8D%E6%9E%84/%E5%8A%A8%E6%80%81%E8%8E%B7%E5%8F%96.html?_ijt=afs1a85n9f7frdobj0tpmqb1rg#";
+    };
+
+</script>
+<script>
+    $(document).ready(function() {
+        $('form').ajaxForm();
+    });
 </script>
 </body>
 </html>

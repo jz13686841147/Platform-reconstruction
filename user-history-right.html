@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta charset="utf-8" />
     <title>雷神充电桩管理平台</title>
-    <meta name="description" content="Static &amp; Dynamic Tables"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+    <meta name="description" content="Static &amp; Dynamic Tables" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
     <!-- bootstrap & fontawesome -->
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap-3.3.4.css">
     <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.4.6.0.css">
     <link rel="stylesheet" href="assets/font-awesome/4.5.0/css/font-awesome.min.css">
     <!-- page specific plugin styles -->
     <!-- ace styles -->
-    <link rel="stylesheet" href="assets/css/ace.min.css" class="ace-main-stylesheet" id="main-ace-style"/>
+    <link rel="stylesheet" href="assets/css/ace.min.css" class="ace-main-stylesheet" id="main-ace-style" />
     <!--[if lte IE 9]>
-    <link rel="stylesheet" href="assets/css/ace-part2.min.css" class="ace-main-stylesheet"/>
+    <link rel="stylesheet" href="assets/css/ace-part2.min.css" class="ace-main-stylesheet" />
     <![endif]-->
-    <link rel="stylesheet" href="assets/css/ace-skins.min.css"/>
-    <link rel="stylesheet" href="assets/css/ace-rtl.min.css"/>
+    <link rel="stylesheet" href="assets/css/ace-skins.min.css" />
+    <link rel="stylesheet" href="assets/css/ace-rtl.min.css" />
     <!--[if lte IE 9]>
-    <link rel="stylesheet" href="assets/css/ace-ie.min.css"/>
+    <link rel="stylesheet" href="assets/css/ace-ie.min.css" />
     <![endif]-->
     <!-- inline styles related to this page -->
     <!-- The fav icon -->
@@ -31,7 +31,6 @@
     <script src="assets/js/html5shiv.min.js"></script>
     <script src="assets/js/respond.min.js"></script>
     <![endif]-->
-
 </head>
 <body class="no-skin">
 <div id="navbar" class="navbar navbar-default          ace-save-state">
@@ -54,7 +53,7 @@
             <ul class="nav ace-nav">
                 <li class="light-blue dropdown-modal">
                     <a data-toggle="dropdown" href="#" class="dropdown-toggle">
-                        <img class="nav-user-photo" src="assets/images/avatars/user.jpg" alt="Jason's Photo"/>
+                        <img class="nav-user-photo" src="assets/images/avatars/user.jpg" alt="Jason's Photo" />
                         <span class="user-info">
 									<small>欢迎,</small>
 									焦卓
@@ -90,17 +89,11 @@
 </div>
 <div class="main-container ace-save-state" id="main-container">
     <script type="text/javascript">
-        try {
-            ace.settings.loadState('main-container')
-        } catch (e) {
-        }
+        try{ace.settings.loadState('main-container')}catch(e){}
     </script>
     <div id="sidebar" class="sidebar                  responsive                    ace-save-state">
         <script type="text/javascript">
-            try {
-                ace.settings.loadState('sidebar')
-            } catch (e) {
-            }
+            try{ace.settings.loadState('sidebar')}catch(e){}
         </script>
         <div class="sidebar-shortcuts" id="sidebar-shortcuts">
         </div>
@@ -112,7 +105,7 @@
                 </a>
                 <b class="arrow"></b>
             </li>
-            <li class="active open">
+            <li class="">
                 <a href="#" class="dropdown-toggle">
                     <i class="menu-icon fa fa-desktop"></i>
                     <span class="menu-text">
@@ -122,7 +115,7 @@
                 </a>
                 <b class="arrow"></b>
                 <ul class="submenu">
-                    <li class="active">
+                    <li class="">
                         <a href="administrator.html">
                             <i class="menu-icon fa fa-caret-right"></i>
                             管理员管理
@@ -130,7 +123,7 @@
                         <b class="arrow"></b>
                     </li>
                     <li class="">
-                        <a href="#">
+                        <a href="role.html">
                             <i class="menu-icon fa fa-caret-right"></i>
                             角色管理
                         </a>
@@ -175,7 +168,7 @@
                         <b class="arrow"></b>
                     </li>
                     <li class="">
-                        <a href="#">
+                        <a href="charginghistory.html">
                             <i class="menu-icon fa fa-caret-right"></i>
                             充电历史
                         </a>
@@ -242,7 +235,7 @@
                     </li>
                 </ul>
             </li>
-            <li class="">
+            <li class="active open">
                 <a href="#" class="dropdown-toggle">
                     <i class="menu-icon fa fa-list-alt"></i>
                     <span class="menu-text"> 注册用户管理 </span>
@@ -250,8 +243,8 @@
                 </a>
                 <b class="arrow"></b>
                 <ul class="submenu">
-                    <li class="">
-                        <a href="#">
+                    <li class="active">
+                        <a href="user.html">
                             <i class="menu-icon fa fa-caret-right"></i>
                             用户
                         </a>
@@ -289,7 +282,7 @@
                         <b class="arrow"></b>
                     </li>
                     <li class="">
-                        <a href="#">
+                        <a href="chargingplace.html">
                             <i class="menu-icon fa fa-caret-right"></i>
                             站点管理
                         </a>
@@ -306,8 +299,7 @@
             </li>
         </ul><!-- /.nav-list -->
         <div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse">
-            <i id="sidebar-toggle-icon" class="ace-icon fa fa-angle-double-left ace-save-state"
-               data-icon1="ace-icon fa fa-angle-double-left" data-icon2="ace-icon fa fa-angle-double-right"></i>
+            <i id="sidebar-toggle-icon" class="ace-icon fa fa-angle-double-left ace-save-state" data-icon1="ace-icon fa fa-angle-double-left" data-icon2="ace-icon fa fa-angle-double-right"></i>
         </div>
     </div>
     <div class="main-content">
@@ -320,9 +312,9 @@
                     </li>
 
                     <li>
-                        <a href="#">系统管理</a>
+                        <a href="#">注册用户管理</a>
                     </li>
-                    <li class="active">管理员管理</li>
+                    <li class="active">历史记录</li>
                 </ul><!-- /.breadcrumb -->
             </div>
 
@@ -347,20 +339,17 @@
                             </div>
 
                             <div class="ace-settings-item">
-                                <input type="checkbox" class="ace ace-checkbox-2 ace-save-state"
-                                       id="ace-settings-navbar" autocomplete="off"/>
+                                <input type="checkbox" class="ace ace-checkbox-2 ace-save-state" id="ace-settings-navbar" autocomplete="off" />
                                 <label class="lbl" for="ace-settings-navbar"> 固定导航栏</label>
                             </div>
 
                             <div class="ace-settings-item">
-                                <input type="checkbox" class="ace ace-checkbox-2 ace-save-state"
-                                       id="ace-settings-sidebar" autocomplete="off"/>
+                                <input type="checkbox" class="ace ace-checkbox-2 ace-save-state" id="ace-settings-sidebar" autocomplete="off" />
                                 <label class="lbl" for="ace-settings-sidebar"> 固定侧边栏</label>
                             </div>
 
                             <div class="ace-settings-item">
-                                <input type="checkbox" class="ace ace-checkbox-2 ace-save-state"
-                                       id="ace-settings-breadcrumbs" autocomplete="off"/>
+                                <input type="checkbox" class="ace ace-checkbox-2 ace-save-state" id="ace-settings-breadcrumbs" autocomplete="off" />
                                 <label class="lbl" for="ace-settings-breadcrumbs"> 固定全部</label>
                             </div>
 
@@ -370,8 +359,7 @@
                             <!--</div>-->
 
                             <div class="ace-settings-item">
-                                <input type="checkbox" class="ace ace-checkbox-2 ace-save-state"
-                                       id="ace-settings-add-container" autocomplete="off"/>
+                                <input type="checkbox" class="ace ace-checkbox-2 ace-save-state" id="ace-settings-add-container" autocomplete="off" />
                                 <label class="lbl" for="ace-settings-add-container">
                                     容器
                                     <b>变小</b>
@@ -381,20 +369,17 @@
 
                         <div class="pull-left width-50">
                             <div class="ace-settings-item">
-                                <input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-hover"
-                                       autocomplete="off"/>
+                                <input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-hover" autocomplete="off" />
                                 <label class="lbl" for="ace-settings-hover"> 子菜单悬停</label>
                             </div>
 
                             <div class="ace-settings-item">
-                                <input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-compact"
-                                       autocomplete="off"/>
+                                <input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-compact" autocomplete="off" />
                                 <label class="lbl" for="ace-settings-compact"> 紧凑的侧边栏 </label>
                             </div>
 
                             <div class="ace-settings-item">
-                                <input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-highlight"
-                                       autocomplete="off"/>
+                                <input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-highlight" autocomplete="off" />
                                 <label class="lbl" for="ace-settings-highlight"> 列表样式 </label>
                             </div>
                         </div><!-- /.pull-left -->
@@ -411,37 +396,185 @@
                                     <div class="pull-right tableTools-container"></div>
                                 </div>
                                 <div class="table-header">
-                                    管理员管理
+                                    历史记录
                                 </div>
-                                <!-- div.table-responsive -->
+                                <div class="tabbable">
+                                    <ul class="nav nav-tabs padding-18 tab-size-bigger" id="myTab">
+                                        <li>
+                                            <a href="user-history.html">
+                                                <i class="blue ace-icon fa fa-user bigger-120"></i>
+                                                历史充电
+                                            </a>
+                                        </li>
+                                        <li class="active">
+                                            <a href="user-history-right.html">
+                                                <i class="green ace-icon fa fa-user bigger-120"></i>
+                                                历史充值
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <div class="tab-content no-border padding-24">
 
-                                <!-- div.dataTables_borderWrap -->
-                                <div>
-                                    <table id="dynamic-table" class="table table-striped table-bordered table-hover">
-                                        <!--<thead>-->
-                                        <!--<tr>-->
-                                        <!--<th class="center">-->
-                                        <!--用户名-->
-                                        <!--</th>-->
-                                        <!--<th>联系方式</th>-->
-                                        <!--<th class="hidden-480">管理员身份</th>-->
-                                        <!--<th class="hidden-480">创建时间</th>-->
-                                        <!--<th>-->
-                                        <!--<i class="ace-icon fa fa-clock-o bigger-110 hidden-480"></i>-->
-                                        <!--上次登录时间-->
-                                        <!--</th>-->
-                                        <!--<th class="hidden-480">是否禁用</th>-->
-                                        <!--<th>操作</th>-->
-                                        <!--</tr>-->
-                                        <!--</thead>-->
-                                        <!--<button class="btn btn-danger button-form js-tooltip"-->
-                                                <!--title="delete"-->
-                                                <!--data-toggle="modal" data-target="#deleteModal">DELETE-->
-                                        <!--</button>-->
+                                        <table id="dynamic-table" class="table table-striped table-bordered table-hover">
+                                            <thead>
+                                            <tr>
+                                                <th>
+                                                    类型
+                                                </th>
+                                                <th>用户名称</th>
+                                                <th class="hidden-480">状态</th>
+                                                <th>积分</th>
+                                                <th class="hidden-480">余额</th>
+                                                <th class="hidden-480">第三方账号</th>
+                                                <th class="hidden-480">创建时间</th>
+                                                <th class="hidden-480">上次登录时间</th>
+                                                <th>操作</th>
+                                            </tr>
+                                            </thead>
 
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        磁卡用户
+                                                    </td>
+                                                    <td>用户名3</td>
+                                                    <td class="hidden-480">正常</td>
+                                                    <td>60</td>
+                                                    <td class="hidden-480">180元</td>
+                                                    <td class="hidden-480">jz13686841147</td>
+                                                    <td class="hidden-480">
+                                                        2017-07-07/10:03:03
+                                                    </td>
+                                                    <td class="hidden-480"><span class="label label-sm label-warning">2017-07-07/10:53:03</span></td>
+                                                    <td>
+                                                        <div class="hidden-sm hidden-xs action-buttons">
+                                                            <a class="blue" href="chargingpile-add.html">
+                                                                <i class="ace-icon fa fa-search-plus bigger-130"></i>
+                                                            </a>
 
+                                                            <a class="green" href="chargingpile-compile.html">
+                                                                <i class="ace-icon fa fa-pencil bigger-130"></i>
+                                                            </a>
+                                                            <a class="orange" href="#">
+                                                                <i class="ace-icon fa fa-history bigger-130"></i>
+                                                            </a>
+                                                            <a class="red" href="#">
+                                                                <i class="ace-icon fa fa-trash-o bigger-130"></i>
+                                                            </a>
+                                                        </div>
 
-                                    </table>
+                                                        <div class="hidden-md hidden-lg">
+                                                            <div class="inline pos-rel">
+                                                                <button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown" data-position="auto">
+                                                                    <i class="ace-icon fa fa-caret-down icon-only bigger-120"></i>
+                                                                </button>
+                                                                <ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
+                                                                    <li>
+                                                                        <a href="chargingpile-add.html" class="tooltip-info" data-rel="tooltip" title="View">
+                                                                                        <span class="blue">
+                                                                                            <i class="ace-icon fa fa-search-plus bigger-120"></i>
+                                                                                        </span>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="chargingpile-compile.html" class="tooltip-success" data-rel="tooltip" title="Edit">
+                                                                            <span class="green">
+                                                                                <i class="ace-icon fa fa-pencil-square-o bigger-120"></i>
+                                                                            </span>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="#" class="tooltip-success" data-rel="tooltip" title="history">
+                                                                            <span class="orange">
+                                                                                <i class="ace-icon fa fa-history bigger-120"></i>
+                                                                            </span>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+                                                                            <span class="red">
+                                                                                <i class="ace-icon fa fa-trash-o bigger-120"></i>
+                                                                            </span>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        磁卡用户
+                                                    </td>
+                                                    <td>用户名4</td>
+                                                    <td class="hidden-480">正常</td>
+                                                    <td>60</td>
+                                                    <td class="hidden-480">180元</td>
+                                                    <td class="hidden-480">jz13686841147</td>
+                                                    <td class="hidden-480">
+                                                        2017-07-07/10:03:03
+                                                    </td>
+                                                    <td class="hidden-480"><span class="label label-sm label-warning">2017-07-07/10:53:03</span></td>
+                                                    <td>
+                                                        <div class="hidden-sm hidden-xs action-buttons">
+                                                            <a class="blue" href="chargingpile-add.html">
+                                                                <i class="ace-icon fa fa-search-plus bigger-130"></i>
+                                                            </a>
+
+                                                            <a class="green" href="chargingpile-compile.html">
+                                                                <i class="ace-icon fa fa-pencil bigger-130"></i>
+                                                            </a>
+                                                            <a class="orange" href="#">
+                                                                <i class="ace-icon fa fa-history bigger-130"></i>
+                                                            </a>
+                                                            <a class="red" href="#">
+                                                                <i class="ace-icon fa fa-trash-o bigger-130"></i>
+                                                            </a>
+                                                        </div>
+
+                                                        <div class="hidden-md hidden-lg">
+                                                            <div class="inline pos-rel">
+                                                                <button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown" data-position="auto">
+                                                                    <i class="ace-icon fa fa-caret-down icon-only bigger-120"></i>
+                                                                </button>
+                                                                <ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
+                                                                    <li>
+                                                                        <a href="chargingpile-add.html" class="tooltip-info" data-rel="tooltip" title="View">
+                                                                                        <span class="blue">
+                                                                                            <i class="ace-icon fa fa-search-plus bigger-120"></i>
+                                                                                        </span>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="chargingpile-compile.html" class="tooltip-success" data-rel="tooltip" title="Edit">
+                                                                            <span class="green">
+                                                                                <i class="ace-icon fa fa-pencil-square-o bigger-120"></i>
+                                                                            </span>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="#" class="tooltip-success" data-rel="tooltip" title="history">
+                                                                            <span class="orange">
+                                                                                <i class="ace-icon fa fa-history bigger-120"></i>
+                                                                            </span>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+                                                                            <span class="red">
+                                                                                <i class="ace-icon fa fa-trash-o bigger-120"></i>
+                                                                            </span>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                    </div>
                                 </div>
                                 <div class="hr hr-18 dotted hr-double"></div>
                                 <h4 class="pink">
@@ -451,8 +584,6 @@
 
                                 <div class="hr hr-18 dotted hr-double"></div>
                             </div>
-
-
                         </div>
                         <!-- PAGE CONTENT ENDS -->
                     </div><!-- /.col -->
@@ -460,22 +591,6 @@
             </div><!-- /.page-content -->
         </div>
     </div><!-- /.main-content -->
-    <!-- Delete Modal -->
-    <!--<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">-->
-        <!--<div class="modal-dialog">-->
-            <!--<div class="modal-content">-->
-                <!--<div class="modal-body">-->
-                    <!--<h4 class="text-center">Are you sure you want to delete this Admin User Detail?</h4>-->
-                <!--</div>-->
-                <!--<div class="modal-footer">-->
-                    <!--<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>-->
-                    <!--<form class="button-form" action="http://localhost:63342/ace-master/%E5%B9%B3%E5%8F%B0%E9%87%8D%E6%9E%84/%E5%8A%A8%E6%80%81%E8%8E%B7%E5%8F%96.html?_ijt=5sf01cpaufqs65m1toisnr1qu4" data-method="DELETE">-->
-                        <!--<button class="btn btn-danger">Delete</button>-->
-                    <!--</form>-->
-                <!--</div>-->
-            <!--</div>-->
-        <!--</div>-->
-    <!--</div>-->
     <div class="footer">
         <div class="footer-inner">
             <div class="footer-content">
@@ -516,7 +631,7 @@
 <script src="assets/js/jquery-1.11.3.min.js"></script>
 <![endif]-->
 <script type="text/javascript">
-    if ('ontouchstart' in document.documentElement) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>" + "<" + "/script>");
+    if('ontouchstart' in document.documentElement) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
 </script>
 <script src="assets/js/bootstrap.min.js"></script>
 <!-- page specific plugin scripts -->
@@ -531,77 +646,57 @@
 <!-- ace scripts -->
 <script src="assets/js/ace-elements.min.js"></script>
 <script src="assets/js/ace.min.js"></script>
-<script src="assets/js/ajax-form.js"></script>
-
-
 <!-- 与此页相关的内联脚本 -->
 <script type="text/javascript">
-
-    jQuery(function ($) {
-
+    jQuery(function($) {
         //启动数据表插件
         var myTable =
-
             $('#dynamic-table')
             //.wrap("<div class='dataTables_borderWrap' />")   //如果你是使用水平滚动（sscrollx）
-                .DataTable({
-                    "bAutoWidth": false,
+                .DataTable( {
+                    responsive: true,
+                    bAutoWidth: false,
                     "bSort": true,
+                    "sPaginationType": "full_numbers",
+                    "aoColumnDefs": [
+                        {
+                            "aTargets": [8],
+                            "bSortable": false,
+                        }
+                    ],
                     "aaSorting": [],
                     "aLengthMenu": [
                         [4, 10, 20, -1],
                         [4, 10, 20, "全部"] // change per page values here
                     ],
-                    "sPaginationType": "full_numbers",
-                    "bDestroy": true,
-                    "bProcessing": true,
-//                    "bServerSide": true,
 
-                    "sAjaxSource": "http://118.178.19.235:8081/admins/?format=json",
+                    //"bProcessing": true,
+                    //"bServerSide": true,
+                    //"sAjaxSource": "http://127.0.0.1/table.php"	,
+
+                    //,
                     //"sScrollY": "200px",
-//                    "bPaginate": false,
+                    //"bPaginate": false,
+
                     //"sScrollX": "100%",
                     //"sScrollXInner": "120%",
                     //"bScrollCollapse": true,
                     //注意：如果你使用水平滚动（sscrollx） ".table-bordered"
                     //you may want to wrap the table inside a "div.dataTables_borderWrap" element
-                    "columns": [
-                        {"mData": "id", "title": "id", "defaultContent": ""},
-                        {"mData": "username", "title": "用户名", "defaultContent": ""},
-                        {"mData": "telephone", "title": "联系方式", "defaultContent": ""},
-                        {"mData": "is_superuser", "title": "管理员身份", "defaultContent": ""},
-                        {"mData": "date_joined", "title": "创建时间", "defaultContent": ""},
-                        {"mData": "last_login", "title": "上次登录时间", "defaultContent": ""},
-                        {"mData": "is_active", "title": "是否禁用", "defaultContent": ""},
-                        {"mData": "id", "title": "操作", "defaultContent": ""}
-                    ],
-                    "aoColumnDefs": [
-                        {
-                            "aTargets": [7],
-                            "bSortable": false,
-                            "mRender": function (data, type, full) {
-                                return "<div class=\"hidden-sm hidden-xs action-buttons\"> <a class=\"blue\" href=\"administrator-add.html\"> <i class=\"ace-icon fa fa-search-plus bigger-130\"></i> </a> <a class=\"green\" href=\"#\"> <i class=\"ace-icon fa fa-pencil bigger-130\"></i></a> <a class=\"red\" data-toggle=\"modal\" data-target=\"#deleteModal\" href=\"#\"> <i class=\"ace-icon fa fa-trash-o bigger-130\"></i></a> </div> <div class=\"hidden-md hidden-lg\"> <div class=\"inline pos-rel\"> <button class=\"btn btn-minier btn-yellow dropdown-toggle\"                data-toggle=\"dropdown\" data-position=\"auto\"><i class=\"ace-icon fa fa-caret-down icon-only bigger-120\"></i> </button> <ul class=\"dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close\"> <li> <a href=\"administrator-add.html\" class=\"tooltip-info\" data-rel=\"tooltip\" title=\"View\"> <span class=\"blue\"> <i class=\"ace-icon fa fa-search-plus bigger-120\"></i> </span> </a> </li> <li> <a href=\"#\" class=\"tooltip-success\" data-rel=\"tooltip\" title=\"Edit\"> <span class=\"green\"> <i class=\"ace-icon fa fa-pencil-square-o bigger-120\"></i> </span></a></li> <li> <a href=\"#\" data-toggle=\"modal\" data-target=\"#deleteModal\" class=\"tooltip-error\" data-rel=\"tooltip\" title=\"Delete\"> <span class=\"red\"> <i class=\"ace-icon fa fa-trash-o bigger-120\"></i></span></a></li></ul> </div> </div>"
-                            }
-                        },
-                        {
-                            "sClass": "hidden-480",
-                            "aTargets": [2, 3, 4],
-                        },
-                        {
-                            "sClass": "hidden",
-                            "aTargets": [0],
-                        }
-                    ],
+
+                    //"iDisplayLength": 50
+
 
                     select: {
                         style: 'multi'
                     }
+                } );
 
-                });
+
 
         $.fn.dataTable.Buttons.defaults.dom.container.className = 'dt-buttons btn-overlap btn-group btn-overlap';
 
-        new $.fn.dataTable.Buttons(myTable, {
+        new $.fn.dataTable.Buttons( myTable, {
             buttons: [
                 {
                     "extend": "colvis",
@@ -637,8 +732,8 @@
                     message: 'This print was produced using the Print button for DataTables'
                 }
             ]
-        });
-        myTable.buttons().container().appendTo($('.tableTools-container'));
+        } );
+        myTable.buttons().container().appendTo( $('.tableTools-container') );
 
         //样式信息框
         var defaultCopyAction = myTable.button(1).action();
@@ -647,13 +742,14 @@
             $('.dt-button-info').addClass('gritter-item-wrapper gritter-info gritter-center white');
         });
 
+
         var defaultColvisAction = myTable.button(0).action();
         myTable.button(0).action(function (e, dt, button, config) {
 
             defaultColvisAction(e, dt, button, config);
 
 
-            if ($('.dt-button-collection > .dropdown-menu').length == 0) {
+            if($('.dt-button-collection > .dropdown-menu').length == 0) {
                 $('.dt-button-collection')
                     .wrapInner('<ul class="dropdown-menu dropdown-light dropdown-caret dropdown-caret" />')
                     .find('a').attr('href', '#').wrap("<li />")
@@ -661,74 +757,88 @@
             $('.dt-button-collection').appendTo('.tableTools-container .dt-buttons')
         });
 
-        setTimeout(function () {
-            $($('.tableTools-container')).find('a.dt-button').each(function () {
+        ////
+
+        setTimeout(function() {
+            $($('.tableTools-container')).find('a.dt-button').each(function() {
                 var div = $(this).find(' > div').first();
-                if (div.length == 1) div.tooltip({container: 'body', title: div.parent().text()});
+                if(div.length == 1) div.tooltip({container: 'body', title: div.parent().text()});
                 else $(this).tooltip({container: 'body', title: $(this).text()});
             });
         }, 500);
 
 
-        myTable.on('select', function (e, dt, type, index) {
-            if (type === 'row') {
-                $(myTable.row(index).node()).find('input:checkbox').prop('checked', true);
+
+
+
+        myTable.on( 'select', function ( e, dt, type, index ) {
+            if ( type === 'row' ) {
+                $( myTable.row( index ).node() ).find('input:checkbox').prop('checked', true);
             }
-        });
-        myTable.on('deselect', function (e, dt, type, index) {
-            if (type === 'row') {
-                $(myTable.row(index).node()).find('input:checkbox').prop('checked', false);
+        } );
+        myTable.on( 'deselect', function ( e, dt, type, index ) {
+            if ( type === 'row' ) {
+                $( myTable.row( index ).node() ).find('input:checkbox').prop('checked', false);
             }
-        });
+        } );
+
+
+
 
         /////////////////////////////////
         //表格复选框
         $('th input[type=checkbox], td input[type=checkbox]').prop('checked', false);
 
-        //选择/取消选择所有行根据表格标题"复选框
-        $('#dynamic-table > thead > tr > th input[type=checkbox], #dynamic-table_wrapper input[type=checkbox]').eq(0).on('click', function () {
-            var th_checked = this.checked;//“TH"表头中的复选框
+        //选择/取消选择所有行根据表格标题”复选框
+        $('#dynamic-table > thead > tr > th input[type=checkbox], #dynamic-table_wrapper input[type=checkbox]').eq(0).on('click', function(){
+            var th_checked = this.checked;//“TH”表头中的复选框
 
-            $('#dynamic-table').find('tbody > tr').each(function () {
+            $('#dynamic-table').find('tbody > tr').each(function(){
                 var row = this;
-                if (th_checked) myTable.row(row).select();
+                if(th_checked) myTable.row(row).select();
                 else  myTable.row(row).deselect();
             });
         });
 
         //选择/取消选择行时复选框被选中/未选中
-        $('#dynamic-table').on('click', 'td input[type=checkbox]', function () {
+        $('#dynamic-table').on('click', 'td input[type=checkbox]' , function(){
             var row = $(this).closest('tr').get(0);
-            if (this.checked) myTable.row(row).deselect();
+            if(this.checked) myTable.row(row).deselect();
             else myTable.row(row).select();
         });
 
-        $(document).on('click', '#dynamic-table .dropdown-toggle', function (e) {
+
+
+        $(document).on('click', '#dynamic-table .dropdown-toggle', function(e) {
             e.stopImmediatePropagation();
             e.stopPropagation();
             e.preventDefault();
         });
 
-        //和第一个简单的表格，并没有tabletools或数据表
-        //选择/取消选择所有行根据表格标题"复选框
-        var active_class = 'active';
-        $('#simple-table > thead > tr > th input[type=checkbox]').eq(0).on('click', function () {
-            var th_checked = this.checked;//“TH"表头中的复选框
 
-            $(this).closest('table').find('tbody > tr').each(function () {
+
+        //和第一个简单的表格，并没有tabletools或数据表
+        //选择/取消选择所有行根据表格标题”复选框
+        var active_class = 'active';
+        $('#simple-table > thead > tr > th input[type=checkbox]').eq(0).on('click', function(){
+            var th_checked = this.checked;//“TH”表头中的复选框
+
+            $(this).closest('table').find('tbody > tr').each(function(){
                 var row = this;
-                if (th_checked) $(row).addClass(active_class).find('input[type=checkbox]').eq(0).prop('checked', true);
+                if(th_checked) $(row).addClass(active_class).find('input[type=checkbox]').eq(0).prop('checked', true);
                 else $(row).removeClass(active_class).find('input[type=checkbox]').eq(0).prop('checked', false);
             });
         });
 
         //选择/取消选择行时复选框被选中/未选中
-        $('#simple-table').on('click', 'td input[type=checkbox]', function () {
+        $('#simple-table').on('click', 'td input[type=checkbox]' , function(){
             var $row = $(this).closest('tr');
-            if ($row.is('.detail-row ')) return;
-            if (this.checked) $row.addClass(active_class);
+            if($row.is('.detail-row ')) return;
+            if(this.checked) $row.addClass(active_class);
             else $row.removeClass(active_class);
         });
+
+
 
         /********************************/
         //在下拉菜单中添加小视图动作按钮的工具提示
@@ -744,17 +854,24 @@
             var off2 = $source.offset();
             //var w2 = $source.width();
 
-            if (parseInt(off2.left) < parseInt(off1.left) + parseInt(w1 / 2)) return 'right';
+            if( parseInt(off2.left) < parseInt(off1.left) + parseInt(w1 / 2) ) return 'right';
             return 'left';
         }
 
+
+
+
         /***************/
-        $('.show-details-btn').on('click', function (e) {
+        $('.show-details-btn').on('click', function(e) {
             e.preventDefault();
             $(this).closest('tr').next().toggleClass('open');
             $(this).find(ace.vars['.icon']).toggleClass('fa-angle-double-down').toggleClass('fa-angle-double-up');
         });
         /***************/
+
+
+
+
 
         /**
          /添加水平滚动条的一个简单的表
@@ -767,55 +884,10 @@
          }
          ).css('padding-top', '12px');
          */
-    });
-
-    //			删除事件
-//    $("#dynamic-table").on("click", "a.red,a.tooltip-error", function () {
-//        var result = confirm("你确定删除这一行吗?");
-//        if (result == true) {
-//            $.ajax({
-//                type: "PUT",
-//                url: "http://118.178.19.235:8081/admins/2",
-////                contentType: 'application/json',
-////                data: JSON.stringify(arr),
-//                success: function (data, status) {
-//                console.log(data)
-//                }
-//            });
-//        } else {
-//            return;
-//        }
-//        ;
-//
-//    });
 
 
-</script>
-<script>
-    $("#dynamic-table").on("click", "a.red,a.tooltip-error", function () {
-        var a =  $(this).parents("tr").children("td:first-child").html();
-        console.log(a);
-        var result = confirm("你确定删除这一行吗?");
-        if (result == true) {
-            $.ajax({
-                url: "http://118.178.19.235:8081/admins/"+a,
-                type: "DELETE",
-
-//                success: function (data) {
-//                console.log(data)
-//                }
-            });
-            location.reload();
-        } else {
-            return;
-        };
-    });
-    $("#dynamic-table").on("click", "a.green,a.tooltip-success", function () {
-        var b =  $(this).parents("tr").children("td:first-child").html();
-        console.log(b)
-        location.href = 'administrator-compile.html?id='+b;
-
-    });
+    })
 </script>
 </body>
+
 </html>

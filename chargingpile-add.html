@@ -24,6 +24,8 @@
     <!-- inline styles related to this page -->
     <!-- The fav icon -->
     <link rel="shortcut icon" href="assets/images/logo20.png">
+
+    <script src="assets/js/jquery-1.11.3.min.js"></script>
     <!-- ace settings handler -->
     <script src="assets/js/ace-extra.min.js"></script>
     <!-- HTML5shiv and Respond.js for IE8 to support HTML5 elements and media queries -->
@@ -31,6 +33,8 @@
     <script src="assets/js/html5shiv.min.js"></script>
     <script src="assets/js/respond.min.js"></script>
     <![endif]-->
+
+    <script src="assets/js/jquery.citys.js"></script>
 </head>
 <body class="no-skin">
 <div id="navbar" class="navbar navbar-default          ace-save-state">
@@ -105,7 +109,7 @@
                 </a>
                 <b class="arrow"></b>
             </li>
-            <li class="active open">
+            <li class="">
                 <a href="#" class="dropdown-toggle">
                     <i class="menu-icon fa fa-desktop"></i>
                     <span class="menu-text">
@@ -115,7 +119,7 @@
                 </a>
                 <b class="arrow"></b>
                 <ul class="submenu">
-                    <li class="active">
+                    <li class="">
                         <a href="administrator.html">
                             <i class="menu-icon fa fa-caret-right"></i>
                             管理员管理
@@ -148,7 +152,7 @@
                     </li>
                 </ul>
             </li>
-            <li class="">
+            <li class="active open">
                 <a href="#" class="dropdown-toggle">
                     <i class="menu-icon fa fa-list"></i>
                     <span class="menu-text"> 充电桩管理 </span>
@@ -159,7 +163,7 @@
                 <b class="arrow"></b>
 
                 <ul class="submenu">
-                    <li class="">
+                    <li class="active">
                         <a href="chargingpile.html">
                             <i class="menu-icon fa fa-caret-right"></i>
                             充电桩管理
@@ -312,9 +316,9 @@
                     </li>
 
                     <li>
-                        <a href="#">系统管理</a>
+                        <a href="#">充电桩管理</a>
                     </li>
-                    <li class="active">管理员管理</li>
+                    <li class="active">充电桩管理</li>
                 </ul><!-- /.breadcrumb -->
             </div>
 
@@ -388,7 +392,7 @@
 
                 <div class="page-header">
                     <h1>
-                        管理员管理
+                        充电桩管理
                         <small>
                             <i class="ace-icon fa fa-angle-double-right"></i>
                             添加
@@ -399,57 +403,183 @@
                 <div class="row">
                     <div class="col-xs-12">
                         <!-- PAGE CONTENT BEGINS -->
-                        <form class="form-horizontal" enctype="multipart/form-data" role="form" method = 'post'  action = "http://118.178.19.235:8081/admins/">
+                        <form class="form-horizontal" enctype="multipart/form-data" role="form" method = 'post'  action = "">
                             <div class="form-group">
-                                <label class="col-sm-3 control-label no-padding-right" for="form-field-select-1">角色</label>
+                                <label class="col-sm-2 control-label no-padding-right" for="form-field-select-1">充电点</label>
                                 <div class="col-sm-9">
-                                    <select class="col-xs-10 col-sm-5" id="form-field-select-1">
+                                    <select class="col-xs-9 col-sm-6" required="yes" id="form-field-select-1">
                                         <option value="">请选择</option>
-                                        <option value="0">平台管理员</option>
-                                        <option value="1">商户管理员</option>
+
+                                        <option value="1" >智汇商务小区</option>
+
+                                        <option value="2" >万达广场停车场</option>
+
+                                        <option value="3" >湾谷科技园</option>
+
+                                        <option value="4" >国和小区</option>
+
+                                        <option value="5" >金宇名邸</option>
                                     </select>
-                                    <span class="help-inline col-xs-12 col-sm-7">
-												<span class="middle"><a href="administrator-new.html">新建角色</a></span>
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+                            <div class="form-group citys" id="demo" >
+                                <label class="col-sm-2 control-label no-padding-right" for="form-field-select-1">充电点地区</label>
+                                <p class="col-sm-9">
+                                    <select class="col-xs-3 col-sm-2" name="province" id="form-field-select-2">
+
+                                    </select>
+                                    <select class="col-xs-3 col-sm-2" name="city" id="form-field-select-3">
+
+                                    </select>
+                                    <select class="col-xs-3 col-sm-2" name="area" id="form-field-select-4">
+
+                                    </select>
+                                </p>
+                            </div>
+                            <div class="space-4"></div>
+                            <script type="text/javascript">
+                                $('#demo').citys({valueType:'name',province:'福建',city:'厦门',area:'思明'});
+                            </script>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 充电点地址 </label>
+
+                                <div class="col-sm-9">
+                                    <input type="text" id="form-field-1" name="username" required="yes" class="col-xs-9 col-sm-6" />
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 充电桩名称 </label>
+
+                                <div class="col-sm-9">
+                                    <input type="text" id="form-field-2" name="username" required="yes" class="col-xs-9 col-sm-6" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label no-padding-right" for="form-field-select-1">桩主</label>
+                                <div class="col-sm-9">
+                                    <select class="col-xs-6 col-sm-3" id="form-field-select-5">
+                                        <option value="">请选择</option>
+                                        <option value="0">桩主3</option>
+                                        <option value="1">桩主4</option>
+                                    </select>
+                                    <span class="help-inline col-xs-3 col-sm-3">
+												<span class="middle"><a href="chargingpile-new.html">新建桩主</a></span>
                                     </span>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 用户名 </label>
-
-                                <div class="col-sm-9">
-                                    <input type="text" id="form-field-1" name="username" required="yes" class="col-xs-10 col-sm-5" />
-                                </div>
-                            </div>
-                            <div class="space-4"></div>
-                            <div class="form-group">
-                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 密码 </label>
-
-                                <div class="col-sm-9">
-                                    <input type="password" name="password" id="form-field-2" required="yes" class="col-xs-10 col-sm-5" />
-                                </div>
-                            </div>
-                            <div class="space-4"></div>
-                            <div class="form-group">
-                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 手机号码 </label>
-
-                                <div class="col-sm-9">
-                                    <input type="text" name="telephone" id="form-field-3" required="yes" class="col-xs-10 col-sm-5" />
-                                </div>
-                            </div>
-                            <div class="control-group">
-                                <label class="col-sm-3 control-label no-padding-right">是否禁用</label>
+                                <label class="col-sm-2 control-label no-padding-right">是否自营</label>
                                 <div class="radio">
                                     <label>
-                                        <input name="is_active" type="radio" class="ace" checked value="true" />
+                                        <input name="is_self_support_select" type="radio" class="ace" checked value="true" />
                                         <span class="lbl"> 是 </span>
                                     </label>
                                     <label>
-                                        <input name="is_active" type="radio" value="false" class="ace" />
+                                        <input name="is_self_support_select" type="radio" value="false" class="ace" />
                                         <span class="lbl"> 否 </span>
                                     </label>
                                 </div>
                             </div>
-                            <div class="space-4"></div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label no-padding-right" for="form-field-select-1">充电桩型号</label>
+                                <div class="col-sm-9">
+                                    <select class="col-xs-6 col-sm-3" name="model_id" id="form-field-select-6">
+                                        <option value="">请选择</option>
+                                        <option value="1" >chargezhuangxinghao1</option>
+                                        <option value="2" >chargezhuangxinghao2</option>
+                                        <option value="3" >chargezhuangxinghao3</option>
+                                        <option value="4" >chargezhuangxinghao4</option>
+                                        <option value="5" >chargezhuangxinghao5</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label no-padding-right" for="form-field-1"> SN </label>
+
+                                <div class="col-sm-9">
+                                    <input type="text" id="form-field-3" name="username" required="yes" class="col-xs-9 col-sm-6" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label no-padding-right" for="form-field-select-1">分类</label>
+                                <div class="col-sm-9">
+                                    <select class="col-xs-6 col-sm-3" name="is_fast_charge" id="form-field-select-7">
+                                        <option value="">请选择</option>
+                                        <option value="1">直流快充</option>
+                                        <option value="0">交流慢充</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 使用功率 </label>
+
+                                <div class="col-sm-9">
+                                    <input type="text" id="form-field-4" name="power" required="yes" class="col-xs-5 col-sm-3" />
+                                    <span class="help-inline col-xs-3 col-sm-3">
+												<span class="middle">KW</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 基本电费 </label>
+
+                                <div class="col-sm-9">
+                                    <input type="text" id="form-field-5" name="base_fee" required="yes" class="col-xs-5 col-sm-3" />
+                                    <span class="help-inline col-xs-3 col-sm-3">
+												<span class="middle">元/度</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 充电服务费 </label>
+
+                                <div class="col-sm-9">
+                                    <input type="text" id="form-field-6" name="charge_fee" required="yes" class="col-xs-5 col-sm-3" />
+                                    <span class="help-inline col-xs-3 col-sm-3">
+												<span class="middle">元/度</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 状态 </label>
+
+                                <div class="col-sm-3">
+                                    <input type="text" id="form-field-7" name="username" required="yes" class="col-xs-3 col-sm-3" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 服务次数 </label>
+
+                                <div class="col-sm-9">
+                                    <input type="text" id="form-field-8" name="username" required="yes" class="col-xs-9 col-sm-6" />
+                                </div>
+                            </div>
+                            <!--经纬度，现在不用-->
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label no-padding-right"  for="form-field-1"> 纬度 </label>
+
+                                <div class="col-sm-9">
+                                    <input type="text" id="id_latitude" name="username" readonly required="yes" class="col-xs-9 col-sm-6" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 经度 </label>
+
+                                <div class="col-sm-9">
+                                    <input type="text" id="id_longitude" name="username" readonly required="yes" class="col-xs-9 col-sm-6" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label no-padding-right" for="form-field-1"></label>
+
+                                <div class="col-sm-9">
+                                    <div id="allmap" style="height:400px;" class="col-xs-12 col-sm-9"></div>
+                                    <!--<input type="text" id="id_longitude" name="username" required="yes" class="col-xs-9 col-sm-6" />-->
+                                </div>
+
+                            </div>
                             <div class="clearfix form-actions " type="submit">
                                 <div class="col-md-offset-3 col-md-9">
                                     <button class="btn btn-info" onclick="addKp()">
@@ -505,12 +635,14 @@
 
 <!-- basic scripts -->
 
-<!--&lt;!&ndash;[if !IE]> &ndash;&gt;-->
+<!--[if !IE]> -->
 <script src="assets/js/jquery-2.1.1.js"></script>
 <!-- <![endif]-->
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=fWqmse9vFRT5con3hLAPysWp"></script>
 
+<script src="assets/js/map.js"></script>
 <!--[if IE]>
-<script src="assets/js/jquery-1.11.3.min.js"></script>
+
 <![endif]-->
 <script type="text/javascript">
     if('ontouchstart' in document.documentElement) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
@@ -529,26 +661,26 @@
 <script src="assets/js/ace-elements.min.js"></script>
 <script src="assets/js/ace.min.js"></script>
 <script>
-//    $('.form-horizontal').submitForm({
-//        url: "http://118.178.19.235:8081/admins/",
-//        dataType: "text",
-//        callback: function (data) {
-//            endFileUpload();
-//            data = eval("(" + data + ")");
-//            alert(data.Content);
-//            if (data.Result > 0) {
-//                location.href = data.Redirect;
-//            }
-//        },
-//        before: function () {
-//            startFileUpload();
-//            var errMsg = "";
-//        }
-//    }).submit();
-//function  addKp() {
-//    $(".form-horizontal").attr("target","rfFrame");
-//    window.location.href="http://localhost:63342/ace-master/%E5%B9%B3%E5%8F%B0%E9%87%8D%E6%9E%84/%E5%8A%A8%E6%80%81%E8%8E%B7%E5%8F%96.html?_ijt=afs1a85n9f7frdobj0tpmqb1rg#";
-//}
+    //    $('.form-horizontal').submitForm({
+    //        url: "http://118.178.19.235:8081/admins/",
+    //        dataType: "text",
+    //        callback: function (data) {
+    //            endFileUpload();
+    //            data = eval("(" + data + ")");
+    //            alert(data.Content);
+    //            if (data.Result > 0) {
+    //                location.href = data.Redirect;
+    //            }
+    //        },
+    //        before: function () {
+    //            startFileUpload();
+    //            var errMsg = "";
+    //        }
+    //    }).submit();
+//    function  addKp() {
+//        $(".form-horizontal").attr("target","rfFrame");
+//        window.location.href="http://localhost:63342/ace-master/%E5%B9%B3%E5%8F%B0%E9%87%8D%E6%9E%84/%E5%8A%A8%E6%80%81%E8%8E%B7%E5%8F%96.html?_ijt=afs1a85n9f7frdobj0tpmqb1rg#";
+//    }
 
 </script>
 </body>

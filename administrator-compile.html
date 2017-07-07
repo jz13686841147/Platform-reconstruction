@@ -7,8 +7,8 @@
     <meta name="description" content="Static &amp; Dynamic Tables" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
     <!-- bootstrap & fontawesome -->
-    <link rel="stylesheet" type="text/css" href="http://www.jq22.com/jquery/bootstrap-3.3.4.css">
-    <link rel="stylesheet" type="text/css" href="http://www.jq22.com/jquery/font-awesome.4.6.0.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap-3.3.4.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.4.6.0.css">
     <link rel="stylesheet" href="assets/font-awesome/4.5.0/css/font-awesome.min.css">
     <!-- page specific plugin styles -->
     <!-- ace styles -->
@@ -123,7 +123,7 @@
                         <b class="arrow"></b>
                     </li>
                     <li class="">
-                        <a href="#">
+                        <a href="role.html">
                             <i class="menu-icon fa fa-caret-right"></i>
                             角色管理
                         </a>
@@ -160,7 +160,7 @@
 
                 <ul class="submenu">
                     <li class="">
-                        <a href="#">
+                        <a href="chargingpile.html">
                             <i class="menu-icon fa fa-caret-right"></i>
                             充电桩管理
                         </a>
@@ -244,7 +244,7 @@
                 <b class="arrow"></b>
                 <ul class="submenu">
                     <li class="">
-                        <a href="#">
+                        <a href="user.html">
                             <i class="menu-icon fa fa-caret-right"></i>
                             用户
                         </a>
@@ -282,7 +282,7 @@
                         <b class="arrow"></b>
                     </li>
                     <li class="">
-                        <a href="#">
+                        <a href="chargingplace.html">
                             <i class="menu-icon fa fa-caret-right"></i>
                             站点管理
                         </a>
@@ -391,7 +391,7 @@
                         管理员管理
                         <small>
                             <i class="ace-icon fa fa-angle-double-right"></i>
-                            添加
+                            编辑
                         </small>
                     </h1>
                 </div><!-- /.page-header -->
@@ -507,7 +507,7 @@
 <!-- basic scripts -->
 
 <!--[if !IE]> -->
-<script src="http://www.jq22.com/jquery/jquery-2.1.1.js"></script>
+<script src="assets/js/jquery-2.1.1.js"></script>
 <!-- <![endif]-->
 
 <!--[if IE]>
@@ -516,7 +516,7 @@
 <script type="text/javascript">
     if('ontouchstart' in document.documentElement) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
 </script>
-<script src="http://www.jq22.com/jquery/bootstrap-3.3.4.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
 <!-- page specific plugin scripts -->
 <script src="assets/js/jquery.dataTables.min.js"></script>
 <script src="assets/js/jquery.dataTables.bootstrap.min.js"></script>
@@ -530,52 +530,52 @@
 <script src="assets/js/ace-elements.min.js"></script>
 <script src="assets/js/ace.min.js"></script>
 <script src="assets/js/ajax-form.js"></script>
-<script>
-    window.onload = function () {
-        var urlinfo=window.location.href; //获取当前页面的url
-        var len=urlinfo.length;//获取url的长度
-        var offset=urlinfo.indexOf("?");//设置参数字符串开始的位置
-        var newsidinfo=urlinfo.substr(offset,len)//取出参数字符串 这里会获得类似“id=1”这样的字符串
-        var newsids=newsidinfo.split("=");//对获得的参数字符串按照“=”进行分割
-        var newsid=newsids[1];//得到参数值
+<!--<script>-->
+    <!--window.onload = function () {-->
+        <!--var urlinfo=window.location.href; //获取当前页面的url-->
+        <!--var len=urlinfo.length;//获取url的长度-->
+        <!--var offset=urlinfo.indexOf("?");//设置参数字符串开始的位置-->
+        <!--var newsidinfo=urlinfo.substr(offset,len)//取出参数字符串 这里会获得类似“id=1”这样的字符串-->
+        <!--var newsids=newsidinfo.split("=");//对获得的参数字符串按照“=”进行分割-->
+        <!--var newsid=newsids[1];//得到参数值-->
 
-        $(".form-horizontal").attr("action",'http://118.178.19.235:8081/admins/'+newsid);
-        $.ajax({
-            type:"get",
-            url:"http://118.178.19.235:8081/admins/"+newsid+"?format=json",
-            data:null,
-            async:true,
-            success: function (data) {
-                $("#form-field-select-1").val(data.data.is_superuser);
-                $("#form-field-1").val(data.data.username);
-                $("#form-field-2").val(data.data.password);
-                $("#form-field-3").val(data.data.telephone);
-//
-                if (data.data.is_active==true){
-                    $("#form-field-4").attr("checked","");
-                } else{
-                    $("#form-field-5").attr("checked","");
-                }
+        <!--$(".form-horizontal").attr("action",'http://118.178.19.235:8081/admins/'+newsid);-->
+        <!--$.ajax({-->
+            <!--type:"get",-->
+            <!--url:"http://118.178.19.235:8081/admins/"+newsid+"?format=json",-->
+            <!--data:null,-->
+            <!--async:true,-->
+            <!--success: function (data) {-->
+                <!--$("#form-field-select-1").val(data.data.is_superuser);-->
+                <!--$("#form-field-1").val(data.data.username);-->
+                <!--$("#form-field-2").val(data.data.password);-->
+                <!--$("#form-field-3").val(data.data.telephone);-->
+<!--//-->
+                <!--if (data.data.is_active==true){-->
+                    <!--$("#form-field-4").attr("checked","");-->
+                <!--} else{-->
+                    <!--$("#form-field-5").attr("checked","");-->
+                <!--}-->
 
 
-            },
-            error: function () {
-                alert("错误");
-            }
+            <!--},-->
+            <!--error: function () {-->
+                <!--alert("错误");-->
+            <!--}-->
 
-        })
-    }
+        <!--})-->
+    <!--}-->
 
-    function  addKp() {
-        $(".form-horizontal").attr("target","rfFrame");
-        window.location.href="http://localhost:63342/ace-master/%E5%B9%B3%E5%8F%B0%E9%87%8D%E6%9E%84/%E5%8A%A8%E6%80%81%E8%8E%B7%E5%8F%96.html?_ijt=afs1a85n9f7frdobj0tpmqb1rg#";
-    };
+    <!--function  addKp() {-->
+        <!--$(".form-horizontal").attr("target","rfFrame");-->
+        <!--window.location.href="http://localhost:63342/ace-master/%E5%B9%B3%E5%8F%B0%E9%87%8D%E6%9E%84/%E5%8A%A8%E6%80%81%E8%8E%B7%E5%8F%96.html?_ijt=afs1a85n9f7frdobj0tpmqb1rg#";-->
+    <!--};-->
 
-</script>
-<script>
-    $(document).ready(function() {
-        $('form').ajaxForm();
-    });
-</script>
+<!--</script>-->
+<!--<script>-->
+    <!--$(document).ready(function() {-->
+        <!--$('form').ajaxForm();-->
+    <!--});-->
+<!--</script>-->
 </body>
 </html>
