@@ -1,3 +1,4 @@
+
 /**
  * Created by K on 10/21/14.
  */
@@ -53,6 +54,4 @@ $(function () {
     });
 
 });
-/**
- * Created by hp on 2017/7/3.
- */
+

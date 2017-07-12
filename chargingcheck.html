@@ -32,6 +32,7 @@
     <script src="assets/js/respond.min.js"></script>
     <![endif]-->
 </head>
+
 <body class="no-skin">
 <div id="navbar" class="navbar navbar-default          ace-save-state">
     <div class="navbar-container ace-save-state" id="navbar-container">
@@ -105,7 +106,7 @@
                 </a>
                 <b class="arrow"></b>
             </li>
-            <li class="active open">
+            <li class="">
                 <a href="#" class="dropdown-toggle">
                     <i class="menu-icon fa fa-desktop"></i>
                     <span class="menu-text">
@@ -122,7 +123,7 @@
                         </a>
                         <b class="arrow"></b>
                     </li>
-                    <li class="active">
+                    <li class="">
                         <a href="role.html">
                             <i class="menu-icon fa fa-caret-right"></i>
                             角色管理
@@ -266,7 +267,7 @@
                     </li>
                 </ul>
             </li>
-            <li class="">
+            <li class="active open">
                 <a href="#" class="dropdown-toggle">
                     <i class="menu-icon fa fa-calendar"></i>
                     <span class="menu-text">充电站管理</span>
@@ -274,7 +275,7 @@
                 </a>
                 <b class="arrow"></b>
                 <ul class="submenu">
-                    <li class="">
+                    <li class="active">
                         <a href="chargingcheck.html">
                             <i class="menu-icon fa fa-caret-right"></i>
                             充电站查看
@@ -314,7 +315,7 @@
                     <li>
                         <a href="#">系统管理</a>
                     </li>
-                    <li class="active">角色管理</li>
+                    <li class="active">管理员管理</li>
                 </ul><!-- /.breadcrumb -->
             </div>
 
@@ -385,143 +386,8 @@
                         </div><!-- /.pull-left -->
                     </div><!-- /.ace-settings-box -->
                 </div><!-- /.ace-settings-container -->
+                <div style="min-height: 600px; width: 100%;margin-top: 50px;" id="map"></div>
 
-                <div class="row">
-                    <div class="col-xs-12">
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <h3 class="header smaller lighter blue"></h3>
-
-                                <div class="clearfix">
-                                    <div class="pull-right tableTools-container"></div>
-                                </div>
-                                <div class="table-header">
-                                    角色管理
-                                </div>
-                                <!-- div.table-responsive -->
-
-                                <!-- div.dataTables_borderWrap -->
-                                <div>
-                                    <table id="dynamic-table" class="table table-striped table-bordered table-hover">
-                                        <thead>
-                                        <tr>
-                                            <th class="center">
-                                                <label class="pos-rel">
-                                                    <input type="checkbox" class="ace" />
-                                                    <span class="lbl"></span>
-                                                </label>
-                                            </th>
-                                            <th>
-                                                菜单编号
-                                            </th>
-                                            <th>
-                                                菜单名称
-                                            </th>
-                                            <th>备注</th>
-                                        </tr>
-                                        </thead>
-
-                                        <tbody>
-                                            <tr>
-                                                <td class="center">
-                                                    <label class="pos-rel">
-                                                        <input type="checkbox" class="ace" />
-                                                        <span class="lbl"></span>
-                                                    </label>
-                                                </td>
-                                                <td>
-                                                    1
-                                                </td>
-                                                <td>
-                                                    模块1
-                                                </td>
-                                                <td>
-
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="center">
-                                                    <label class="pos-rel">
-                                                        <input type="checkbox" class="ace" />
-                                                        <span class="lbl"></span>
-                                                    </label>
-                                                </td>
-                                                <td>
-                                                    1
-                                                </td>
-                                                <td>
-                                                    模块1
-                                                </td>
-                                                <td>
-
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="center">
-                                                    <label class="pos-rel">
-                                                        <input type="checkbox" class="ace" />
-                                                        <span class="lbl"></span>
-                                                    </label>
-                                                </td>
-                                                <td>
-                                                    1
-                                                </td>
-                                                <td>
-                                                    模块1
-                                                </td>
-                                                <td>
-
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="center">
-                                                    <label class="pos-rel">
-                                                        <input type="checkbox" class="ace" />
-                                                        <span class="lbl"></span>
-                                                    </label>
-                                                </td>
-                                                <td>
-                                                    1
-                                                </td>
-                                                <td>
-                                                    模块1
-                                                </td>
-                                                <td>
-
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="center">
-                                                    <label class="pos-rel">
-                                                        <input type="checkbox" class="ace" />
-                                                        <span class="lbl"></span>
-                                                    </label>
-                                                </td>
-                                                <td>
-                                                    1
-                                                </td>
-                                                <td>
-                                                    模块1
-                                                </td>
-                                                <td>
-
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                                <div class="hr hr-18 dotted hr-double"></div>
-                                <h4 class="pink">
-                                    <i class="ace-icon fa fa-hand-o-right icon-animated-hand-pointer blue"></i>
-                                    <a href="#" role="button" class="green" data-toggle="modal"> 雷神充电，为美好生活充电 </a>
-                                </h4>
-
-                                <div class="hr hr-18 dotted hr-double"></div>
-                            </div>
-                        </div>
-                        <!-- PAGE CONTENT ENDS -->
-                    </div><!-- /.col -->
-                </div><!-- /.row -->
             </div><!-- /.page-content -->
         </div>
     </div><!-- /.main-content -->
@@ -580,266 +446,142 @@
 <!-- ace scripts -->
 <script src="assets/js/ace-elements.min.js"></script>
 <script src="assets/js/ace.min.js"></script>
-<!-- 与此页相关的内联脚本 -->
-<script type="text/javascript">
-    jQuery(function($) {
-        //启动数据表插件
-        var myTable =
-            $('#dynamic-table')
-            //.wrap("<div class='dataTables_borderWrap' />")   //如果你是使用水平滚动（sscrollx）
-                .DataTable( {
 
-                    responsive: true,
-                    bAutoWidth: false,
-                    "bSort": true,
-                    "sPaginationType": "full_numbers",
-//                    "aoColumnDefs": [
-//                        {
-//                            "aTargets": [6],
-//                            "bSortable": false,
-//                        }
-//                    ],
-                    "aaSorting": [],
-                    "aLengthMenu": [
-                        [4, 10, 20, -1],
-                        [4, 10, 20, "全部"] // change per page values here
-                    ],
-                    columnDefs: [ {
-                        orderable: false,
-//                        className: 'select-checkbox',
-                        targets:   0
-                    } ],
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=IDvNBsejl9oqMbPF316iKsXR"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.js"></script>
+<link rel="stylesheet" href="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.css" />
+</body>
+<!--图表-->
+<script>
+    var markerArr = [
+        { title: "名称：上海华晶宾馆",status:"1", point: "121.54267,31.27684", address: "长阳路1687号",number:"10", tel: "(021)51860805" },
+        { title: "名称：上海威尼斯大酒店",status:"2", point: "121.551797,31.287888", address: "内江路365号3楼(周家嘴路) ",number:"15", tel: "18500000000" },
+        { title: "名称：杨浦公园", status:"1",point: "121.542454,31.28653", address: "上海市杨浦区控江路",number:"18", tel: "(021)65430028" },
+        { title: "名称：杨浦科技馆",status:"0", point: "121.563742,31.286407", address: "隆昌路690号",number:"20", tel: "18500000000" }
+    ];
 
-                    //"bProcessing": true,
-                    //"bServerSide": true,
-                    //"sAjaxSource": "http://127.0.0.1/table.php"	,
+    var map; //Map实例
+    function map_init() {
+        map = new BMap.Map("map");
+        //第1步：设置地图中心点，广州市
+        var point = new BMap.Point(121.54267, 31.27684);
+        //第2步：初始化地图,设置中心点坐标和地图级别。
+        map.centerAndZoom(point, 13);
+        //第3步：启用滚轮放大缩小
+        map.enableScrollWheelZoom(true);
+        //第4步：向地图中添加缩放控件
+        var ctrlNav = new window.BMap.NavigationControl({
+            anchor: BMAP_ANCHOR_TOP_LEFT,
+            type: BMAP_NAVIGATION_CONTROL_LARGE
+        });
+        map.addControl(ctrlNav);
+        //第5步：向地图中添加缩略图控件
+        var ctrlOve = new window.BMap.OverviewMapControl({
+            anchor: BMAP_ANCHOR_BOTTOM_RIGHT,
+            isOpen: 1
+        });
+        map.addControl(ctrlOve);
 
-                    //,
-                    //"sScrollY": "200px",
-                    //"bPaginate": false,
+        //第6步：向地图中添加比例尺控件
+        var ctrlSca = new window.BMap.ScaleControl({
+            anchor: BMAP_ANCHOR_BOTTOM_LEFT
+        });
+        map.addControl(ctrlSca);
 
-                    //"sScrollX": "100%",
-                    //"sScrollXInner": "120%",
-                    //"bScrollCollapse": true,
-                    //注意：如果你使用水平滚动（sscrollx） ".table-bordered"
-                    //you may want to wrap the table inside a "div.dataTables_borderWrap" element
-
-                    //"iDisplayLength": 50
-
-
-                    select: {
-                        style: 'multi'
-                    }
-                } );
-
-
-
-        $.fn.dataTable.Buttons.defaults.dom.container.className = 'dt-buttons btn-overlap btn-group btn-overlap';
-
-        new $.fn.dataTable.Buttons( myTable, {
-            buttons: [
-                {
-                    "extend": "colvis",
-                    "text": "<i class='fa fa-search bigger-110 blue'></i> <span class='hidden'>显示/隐藏  列</span>",
-                    "className": "btn btn-white btn-primary btn-bold",
-                    columns: ':not(:first):not(:last)'
-                },
-                {
-                    "extend": "copy",
-                    "text": "<i class='fa fa-copy bigger-110 pink'></i> <span class='hidden'>复制到剪贴板</span>",
-                    "className": "btn btn-white btn-primary btn-bold"
-                },
-                {
-                    "extend": "csv",
-                    "text": "<i class='fa fa-database bigger-110 orange'></i> <span class='hidden'>导出到 CSV</span>",
-                    "className": "btn btn-white btn-primary btn-bold"
-                },
-                {
-                    "extend": "excel",
-                    "text": "<i class='fa fa-file-excel-o bigger-110 green'></i> <span class='hidden'>输出到 Excel</span>",
-                    "className": "btn btn-white btn-primary btn-bold"
-                },
-                {
-                    "extend": "pdf",
-                    "text": "<i class='fa fa-file-pdf-o bigger-110 red'></i> <span class='hidden'>输出到 PDF</span>",
-                    "className": "btn btn-white btn-primary btn-bold"
-                },
-                {
-                    "extend": "print",
-                    "text": "<i class='fa fa-print bigger-110 grey'></i> <span class='hidden'>打印</span>",
-                    "className": "btn btn-white btn-primary btn-bold",
-                    autoPrint: false,
-                    message: 'This print was produced using the Print button for DataTables'
+        //第7步：绘制点
+        for (var i = 0; i < markerArr.length; i++) {
+            var p0 = markerArr[i].point.split(",")[0];
+            var p1 = markerArr[i].point.split(",")[1];
+            if (markerArr[i].status==0){
+                function addMarker(point, index) {
+                    var myIcon = new BMap.Icon("http://api.map.baidu.com/img/markers.png",
+                        new BMap.Size(23, 25), {
+                            offset: new BMap.Size(10, 25),
+                            imageOffset: new BMap.Size(0, 0 - 10 * 25)
+                        });
+                    var marker = new BMap.Marker(point, { icon: myIcon });
+                    map.addOverlay(marker);
+                    return marker;
                 }
-            ]
-        } );
-        myTable.buttons().container().appendTo( $('.tableTools-container') );
-
-        //样式信息框
-        var defaultCopyAction = myTable.button(1).action();
-        myTable.button(1).action(function (e, dt, button, config) {
-            defaultCopyAction(e, dt, button, config);
-            $('.dt-button-info').addClass('gritter-item-wrapper gritter-info gritter-center white');
-        });
-
-
-        var defaultColvisAction = myTable.button(0).action();
-        myTable.button(0).action(function (e, dt, button, config) {
-
-            defaultColvisAction(e, dt, button, config);
-
-
-            if($('.dt-button-collection > .dropdown-menu').length == 0) {
-                $('.dt-button-collection')
-                    .wrapInner('<ul class="dropdown-menu dropdown-light dropdown-caret dropdown-caret" />')
-                    .find('a').attr('href', '#').wrap("<li />")
+            }else if(markerArr[i].status==1){
+                function addMarker(point, index) {
+                    var myIcon = new BMap.Icon("http://api.map.baidu.com/img/markers.png",
+                        new BMap.Size(23, 25), {
+                            offset: new BMap.Size(10, 25),
+                            imageOffset: new BMap.Size(0, 0 - 11 * 25)
+                        });
+                    var marker = new BMap.Marker(point, { icon: myIcon });
+                    map.addOverlay(marker);
+                    return marker;
+                }
+            }else if(markerArr[i].status==2){
+                function addMarker(point, index) {
+                    var myIcon = new BMap.Icon("http://api.map.baidu.com/img/markers.png",
+                        new BMap.Size(23, 25), {
+                            offset: new BMap.Size(10, 25),
+                            imageOffset: new BMap.Size(0, 0 - 12 * 25)
+                        });
+                    var marker = new BMap.Marker(point, { icon: myIcon });
+                    map.addOverlay(marker);
+                    return marker;
+                }
             }
-            $('.dt-button-collection').appendTo('.tableTools-container .dt-buttons')
-        });
-
-        ////
-
-        setTimeout(function() {
-            $($('.tableTools-container')).find('a.dt-button').each(function() {
-                var div = $(this).find(' > div').first();
-                if(div.length == 1) div.tooltip({container: 'body', title: div.parent().text()});
-                else $(this).tooltip({container: 'body', title: $(this).text()});
-            });
-        }, 500);
-
-
-
-
-
-        myTable.on( 'select', function ( e, dt, type, index ) {
-            if ( type === 'row' ) {
-                $( myTable.row( index ).node() ).find('input:checkbox').prop('checked', true);
-            }
-        } );
-        myTable.on( 'deselect', function ( e, dt, type, index ) {
-            if ( type === 'row' ) {
-                $( myTable.row( index ).node() ).find('input:checkbox').prop('checked', false);
-            }
-        } );
-
-
-
-
-        /////////////////////////////////
-        //表格复选框
-        $('th input[type=checkbox], td input[type=checkbox]').prop('checked', false);
-
-        //选择/取消选择所有行根据表格标题”复选框
-        $('#dynamic-table > thead > tr > th input[type=checkbox], #dynamic-table_wrapper input[type=checkbox]').eq(0).on('click', function(){
-            var th_checked = this.checked;//“TH”表头中的复选框
-
-            $('#dynamic-table').find('tbody > tr').each(function(){
-                var row = this;
-                if(th_checked) myTable.row(row).select();
-                else  myTable.row(row).deselect();
-            });
-        });
-
-        //选择/取消选择行时复选框被选中/未选中
-        $('#dynamic-table').on('click', 'td input[type=checkbox]' , function(){
-            var row = $(this).closest('tr').get(0);
-            if(this.checked) myTable.row(row).deselect();
-            else myTable.row(row).select();
-        });
-
-
-
-        $(document).on('click', '#dynamic-table .dropdown-toggle', function(e) {
-            e.stopImmediatePropagation();
-            e.stopPropagation();
-            e.preventDefault();
-        });
-
-
-
-        //和第一个简单的表格，并没有tabletools或数据表
-        //选择/取消选择所有行根据表格标题”复选框
-        var active_class = 'active';
-        $('#simple-table > thead > tr > th input[type=checkbox]').eq(0).on('click', function(){
-            var th_checked = this.checked;//“TH”表头中的复选框
-
-            $(this).closest('table').find('tbody > tr').each(function(){
-                var row = this;
-                if(th_checked) $(row).addClass(active_class).find('input[type=checkbox]').eq(0).prop('checked', true);
-                else $(row).removeClass(active_class).find('input[type=checkbox]').eq(0).prop('checked', false);
-            });
-        });
-
-        //选择/取消选择行时复选框被选中/未选中
-        $('#simple-table').on('click', 'td input[type=checkbox]' , function(){
-            var $row = $(this).closest('tr');
-            if($row.is('.detail-row ')) return;
-            if(this.checked) $row.addClass(active_class);
-            else $row.removeClass(active_class);
-        });
-
-
-
-        /********************************/
-        //在下拉菜单中添加小视图动作按钮的工具提示
-        $('[data-rel="tooltip"]').tooltip({placement: tooltip_placement});
-
-        //向左或向右放置工具提示
-        function tooltip_placement(context, source) {
-            var $source = $(source);
-            var $parent = $source.closest('table')
-            var off1 = $parent.offset();
-            var w1 = $parent.width();
-
-            var off2 = $source.offset();
-            //var w2 = $source.width();
-
-            if( parseInt(off2.left) < parseInt(off1.left) + parseInt(w1 / 2) ) return 'right';
-            return 'left';
+            var maker = addMarker(new window.BMap.Point(p0, p1), i);
+            addInfoWindow(maker, markerArr[i], i);
         }
+    }
 
+    // 添加标注
+    //    function addMarker(point, index) {
+    //
+    //            var myIcon = new BMap.Icon("http://api.map.baidu.com/img/markers.png",
+    //                new BMap.Size(23, 25), {
+    //                    offset: new BMap.Size(10, 25),
+    //                    imageOffset: new BMap.Size(0, 0 - index * 25)
+    //                });
+    //            var marker = new BMap.Marker(point, { icon: myIcon });
+    //            map.addOverlay(marker);
+    //            return marker;
+    //
+    //
+    //    }
 
+    // 添加信息窗口
+    function addInfoWindow(marker, poi) {
+        //pop弹窗标题
+        var title = '<div style="font-weight:bold;color:#CE5521;font-size:14px">' + poi.title + '</div>';
+        //pop弹窗信息
+        var html = [];
+        html.push('<table cellspacing="0" style="table-layout:fixed;width:100%;font:12px arial,simsun,sans-serif"><tbody>');
+        html.push('<tr>');
+        html.push('<td style="vertical-align:top;line-height:16px;width:38px;white-space:nowrap;word-break:keep-all">地址:</td>');
+        html.push('<td style="vertical-align:top;line-height:16px">' + poi.address + ' </td>');
+        html.push('</tr>');
+        html.push('<tr>');
+        html.push('<td style="vertical-align:top;line-height:16px;width:38px;white-space:nowrap;word-break:keep-all">电话:</td>');
+        html.push('<td style="vertical-align:top;line-height:16px">' + poi.tel + ' </td>');
+        html.push('</tr>');
+        html.push('<tr>');
+        html.push('<td style="vertical-align:top;line-height:16px;width:38px;white-space:nowrap;word-break:keep-all">数量:</td>');
+        html.push('<td style="vertical-align:top;line-height:16px">' + poi.number+'台' + ' </td>');
+        html.push('</tr>');
+        html.push('</tbody></table>');
+        var infoWindow = new BMap.InfoWindow(html.join(""), { title: title, width: 200 });
 
+        var openInfoWinFun = function () {
+            marker.openInfoWindow(infoWindow);
+        };
+        marker.addEventListener("click", openInfoWinFun);
+        return openInfoWinFun;
+    }
 
-        /***************/
-        $('.show-details-btn').on('click', function(e) {
-            e.preventDefault();
-            $(this).closest('tr').next().toggleClass('open');
-            $(this).find(ace.vars['.icon']).toggleClass('fa-angle-double-down').toggleClass('fa-angle-double-up');
-        });
-        /***************/
-
-
-
-
-
-        /**
-         /添加水平滚动条的一个简单的表
-         $('#simple-table').css({'width':'2000px', 'max-width': 'none'}).wrap('<div style="width: 1000px;" />').parent().ace_scroll(
-         {
-           horizontal: true,
-           styleClass: 'scroll-top scroll-dark scroll-visible',//show the scrollbars on top(default is bottom)
-           size: 2000,
-           mouseWheelLock: true
-         }
-         ).css('padding-top', '12px');
-         */
-
-
-    })
-    //			删除事件
-    //            $("#dynamic-table").on("click","a.red,a.tooltip-error", function() {
-    //                var result = confirm("你确定删除这一行吗?");
-    //                if(result==true){
-    //                    var link = $(this).parents("tr");
-    //                    link.remove();
-    //                }else{
-    //                    return;
-    //                };
-    //            });
-
+    //异步调用百度js
+    function map_load() {
+        var load = document.createElement("script");
+        load.src = "http://api.map.baidu.com/api?v=1.4&callback=map_init";
+        document.body.appendChild(load);
+    }
+    window.onload = map_load;
 
 </script>
-</body>
-
 </html>

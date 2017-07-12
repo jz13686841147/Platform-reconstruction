@@ -20583,12 +20583,10 @@ input.typeahead.scrollable ~ .tt-menu {
 .onpage-help-modal .modal-body {
     font-size: 14px
 }
-
 @media print {
     .main-content .nav-search, .navbar, .sidebar {
         display: none !important
     }
-
     .footer, .footer .footer-inner, .footer .footer-inner .footer-content {
         width: 100%
     }
@@ -20628,6 +20626,6 @@ input.typeahead.scrollable ~ .tt-menu {
     }
 
     .label {
-        border: 1px solid #666 !important
+        border: 1px solid #666 !important;
     }
 }
